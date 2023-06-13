@@ -1,0 +1,1298 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Required Props Implementation test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+        React
+      </span>
+      <span class="token keyword">
+        from
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        "react"
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+        DateInput
+      </span>
+      <span class="token keyword">
+        from
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        "@idesigncode/date-input/DateInput.mjs"
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        "@idesigncode/date-input/theme.css"
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        "@idesigncode/date-input/layout.css"
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        const
+      </span>
+      <span class>
+      </span>
+      <span class="token function-variable function">
+        RequiredPropsExample
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        =
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        =&gt;
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        {
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        const
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        [
+      </span>
+      <span class>
+        value
+      </span>
+      <span class="token punctuation">
+        ,
+      </span>
+      <span class>
+        setValue
+      </span>
+      <span class="token punctuation">
+        ]
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        =
+      </span>
+      <span class>
+        React
+      </span>
+      <span class="token punctuation">
+        .
+      </span>
+      <span class="token function">
+        useState
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class="token string">
+        "2000-12-31"
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        const
+      </span>
+      <span class>
+      </span>
+      <span class="token function-variable function">
+        handleOnChange
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        =
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class="token parameter">
+        event
+      </span>
+      <span class="token parameter punctuation">
+        ,
+      </span>
+      <span class="token parameter">
+        formatValue
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        =&gt;
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        {
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token function">
+        setValue
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class>
+        formatValue
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        }
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        return
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token tag punctuation">
+        &lt;
+      </span>
+      <span class="token tag class-name">
+        DateInput
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        name
+      </span>
+      <span class="token tag attr-value punctuation attr-equals">
+        =
+      </span>
+      <span class="token tag attr-value punctuation">
+        "
+      </span>
+      <span class="token tag attr-value">
+        field_name
+      </span>
+      <span class="token tag attr-value punctuation">
+        "
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        onChange
+      </span>
+      <span class="token tag script language-javascript script-punctuation punctuation">
+        =
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        {
+      </span>
+      <span class="token tag script language-javascript">
+        handleOnChange
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        }
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        value
+      </span>
+      <span class="token tag script language-javascript script-punctuation punctuation">
+        =
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        {
+      </span>
+      <span class="token tag script language-javascript">
+        value
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        }
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag punctuation">
+        /&gt;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        }
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        export
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        default
+      </span>
+      <span class>
+        RequiredPropsExample
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;
+
+exports[`Required Props Name test 1`] = `
+<div class="dateInput"
+     data-testid="test_name-DateInput"
+>
+  <input aria-label="Date format: dd/mm/yyyy"
+         class="field"
+         data-testid="test_name"
+         name="test_name"
+         placeholder="dd/mm/yyyy"
+         type="text"
+         value="02/06/2023"
+  >
+  <button aria-label="Open calendar date picker"
+          class="openCalendarButton"
+          data-testid="test_name-OpenCalendarButton"
+          type="button"
+  >
+    <svg class="iconCalendar"
+         data-testid="test_name-Icon"
+         xmlns="http://www.w3.org/2000/svg"
+         version="1.1"
+         x="0px"
+         y="0px"
+         viewbox="131 -131 512 512"
+         xml:space="preserve"
+    >
+      <g>
+        <path d="M186.6,343.9h400.8V51.7H186.6V343.9z M296.1-2.6v-81.9c0-2.6-0.9-5.2-2.6-6.9s-4.3-2.6-6.9-2.6h-18.1   c-2.6,0-5.2,0.9-6.9,2.6c-1.7,1.7-2.6,4.3-2.6,6.9v81.9c0,2.6,0.9,5.2,2.6,6.9c1.7,1.7,4.3,2.6,6.9,2.6h18.1c2.6,0,5.2-0.9,6.9-2.6   C295.2,2.6,296.1,0,296.1-2.6z M515-2.6v-81.9c0-2.6-0.9-5.2-2.6-6.9c-1.7-1.7-4.3-2.6-6.9-2.6h-18.1c-2.6,0-5.2,0.9-6.9,2.6   c-1.7,1.7-2.6,4.3-2.6,6.9v81.9c0,2.6,0.9,5.2,2.6,6.9s4.3,2.6,6.9,2.6h18.1c2.6,0,5.2-0.9,6.9-2.6C514.1,2.6,515,0,515-2.6z    M624.5-20.7v364.6c0,9.5-3.4,18.1-11.2,25.9S597.7,381,587.4,381H186.6c-9.5,0-18.1-3.4-25.9-11.2c-6.9-6.9-11.2-15.5-11.2-25.9   V-20.7c0-9.5,3.4-18.1,11.2-25.9c6.9-6.9,15.5-11.2,25.9-11.2h37.1v-27.5c0-12.9,4.3-23.3,13.8-31.9c8.6-8.6,19.8-13.8,31.8-13.8   h18.1c12.9,0,23.3,4.3,31.9,13.8c8.6,8.6,13.8,19.8,13.8,31.9v27.6h109.5v-27.6c0-12.9,4.3-23.3,13.8-31.9   c8.6-8.6,19.8-13.8,31.9-13.8h18.1c12.9,0,23.3,4.3,31.9,13.8c8.6,8.6,13.8,19.8,13.8,31.9v27.6h36.2c9.5,0,18.1,3.4,25.9,11.2   C621-39.6,624.5-31,624.5-20.7z">
+        </path>
+      </g>
+    </svg>
+  </button>
+  <dialog class="calendar"
+          data-testid="test_name-Calendar"
+          open
+  >
+    <svg class="calendarArrow"
+         data-testid="test_name-CalendarArrow"
+         viewbox="0 0 20 9"
+         xmlns="http://www.w3.org/2000/svg"
+         fill="currentcolor"
+    >
+      <polyline class="selected"
+                points="0,10 10,0 20,10"
+                fill="none"
+                stroke-width="1"
+      >
+      </polyline>
+    </svg>
+    <div class="calendarTabs"
+         data-testid="test_name-CalendarTabs"
+         role="tablist"
+    >
+      <button aria-selected="true"
+              data-testid="test_name-Tab-Day"
+              disabled
+              id="test_name-Tab-Day"
+              role="tab"
+              type="button"
+      >
+        <span>
+          day
+        </span>
+      </button>
+      <button data-testid="test_name-Tab-Month"
+              id="test_name-Tab-Month"
+              role="tab"
+              type="button"
+      >
+        <span>
+          month
+        </span>
+      </button>
+      <button data-testid="test_name-Tab-Year"
+              id="test_name-Tab-Year"
+              role="tab"
+              type="button"
+      >
+        <span>
+          year
+        </span>
+      </button>
+    </div>
+    <div aria-labelledby="test_name-Tab-Day"
+         class="view"
+         data-testid="test_name-View"
+         role="tabpanel"
+    >
+      <div class="viewHead"
+           data-testid="test_name-ViewHead"
+      >
+        <div class="dateRange Day">
+          <button data-testid="test_name-Calendar-Day-ButtonPrevious"
+                  class="arrowButton previous"
+                  type="button"
+          >
+            <span>
+              View day options in May
+            </span>
+          </button>
+          <span data-testid="test_name-Calendar-Day-Range"
+                class="dateRangeText"
+          >
+            Jun
+          </span>
+          <button data-testid="test_name-Calendar-Day-ButtonNext"
+                  class="arrowButton next"
+                  type="button"
+          >
+            <span>
+              View day options in Jul
+            </span>
+          </button>
+        </div>
+        <button aria-label="Change year"
+                class="dateRangeYear Day"
+                data-testid="test_name-DateRangeYear"
+                type="button"
+        >
+          2023
+        </button>
+      </div>
+      <div class="viewBody Day"
+           data-testid="test_name-ViewBody"
+      >
+        <div class="viewWeekDays"
+             data-testid="test_name-Calendar-Day-WeekDay-1"
+        >
+          Mon
+        </div>
+        <div class="viewWeekDays"
+             data-testid="test_name-Calendar-Day-WeekDay-2"
+        >
+          Tue
+        </div>
+        <div class="viewWeekDays"
+             data-testid="test_name-Calendar-Day-WeekDay-3"
+        >
+          Wed
+        </div>
+        <div class="viewWeekDays"
+             data-testid="test_name-Calendar-Day-WeekDay-4"
+        >
+          Thu
+        </div>
+        <div class="viewWeekDays"
+             data-testid="test_name-Calendar-Day-WeekDay-5"
+        >
+          Fri
+        </div>
+        <div class="viewWeekDays"
+             data-testid="test_name-Calendar-Day-WeekDay-6"
+        >
+          Sat
+        </div>
+        <div class="viewWeekDays"
+             data-testid="test_name-Calendar-Day-WeekDay-7"
+        >
+          Sun
+        </div>
+        <button aria-hidden="true"
+                aria-label="29 May 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-05-29"
+                disabled
+                type="button"
+        >
+          29
+        </button>
+        <button aria-hidden="true"
+                aria-label="30 May 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-05-30"
+                disabled
+                type="button"
+        >
+          30
+        </button>
+        <button aria-hidden="true"
+                aria-label="31 May 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-05-31"
+                disabled
+                type="button"
+        >
+          31
+        </button>
+        <button aria-label="1 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-01"
+                type="button"
+        >
+          1
+        </button>
+        <button aria-current="date"
+                aria-label="Selected 2 June 2023"
+                class="dateOption Day selected"
+                data-testid="test_name-Calendar-Day-2023-06-02"
+                type="button"
+        >
+          2
+        </button>
+        <button aria-label="3 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-03"
+                type="button"
+        >
+          3
+        </button>
+        <button aria-label="4 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-04"
+                type="button"
+        >
+          4
+        </button>
+        <button aria-label="5 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-05"
+                type="button"
+        >
+          5
+        </button>
+        <button aria-label="6 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-06"
+                type="button"
+        >
+          6
+        </button>
+        <button aria-label="7 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-07"
+                type="button"
+        >
+          7
+        </button>
+        <button aria-label="8 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-08"
+                type="button"
+        >
+          8
+        </button>
+        <button aria-label="9 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-09"
+                type="button"
+        >
+          9
+        </button>
+        <button aria-label="10 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-10"
+                type="button"
+        >
+          10
+        </button>
+        <button aria-label="11 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-11"
+                type="button"
+        >
+          11
+        </button>
+        <button aria-label="12 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-12"
+                type="button"
+        >
+          12
+        </button>
+        <button aria-label="13 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-13"
+                type="button"
+        >
+          13
+        </button>
+        <button aria-label="14 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-14"
+                type="button"
+        >
+          14
+        </button>
+        <button aria-label="15 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-15"
+                type="button"
+        >
+          15
+        </button>
+        <button aria-label="16 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-16"
+                type="button"
+        >
+          16
+        </button>
+        <button aria-label="17 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-17"
+                type="button"
+        >
+          17
+        </button>
+        <button aria-label="18 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-18"
+                type="button"
+        >
+          18
+        </button>
+        <button aria-label="19 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-19"
+                type="button"
+        >
+          19
+        </button>
+        <button aria-label="20 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-20"
+                type="button"
+        >
+          20
+        </button>
+        <button aria-label="21 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-21"
+                type="button"
+        >
+          21
+        </button>
+        <button aria-label="22 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-22"
+                type="button"
+        >
+          22
+        </button>
+        <button aria-label="23 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-23"
+                type="button"
+        >
+          23
+        </button>
+        <button aria-label="24 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-24"
+                type="button"
+        >
+          24
+        </button>
+        <button aria-label="25 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-25"
+                type="button"
+        >
+          25
+        </button>
+        <button aria-label="26 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-26"
+                type="button"
+        >
+          26
+        </button>
+        <button aria-label="27 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-27"
+                type="button"
+        >
+          27
+        </button>
+        <button aria-label="28 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-28"
+                type="button"
+        >
+          28
+        </button>
+        <button aria-label="29 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-29"
+                type="button"
+        >
+          29
+        </button>
+        <button aria-label="30 June 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-06-30"
+                type="button"
+        >
+          30
+        </button>
+        <button aria-hidden="true"
+                aria-label="1 July 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-07-01"
+                disabled
+                type="button"
+        >
+          1
+        </button>
+        <button aria-hidden="true"
+                aria-label="2 July 2023"
+                class="dateOption Day"
+                data-testid="test_name-Calendar-Day-2023-07-02"
+                disabled
+                type="button"
+        >
+          2
+        </button>
+      </div>
+    </div>
+  </dialog>
+</div>
+`;
+
+exports[`Required Props On Change test 1`] = `
+<div class="dateInput"
+     data-testid="field_name-DateInput"
+>
+  <input aria-label="Date format: dd/mm/yyyy"
+         class="field"
+         data-testid="field_name"
+         name="field_name"
+         placeholder="dd/mm/yyyy"
+         type="text"
+         value="02/06/2023"
+  >
+  <button aria-label="Open calendar date picker"
+          class="openCalendarButton"
+          data-testid="field_name-OpenCalendarButton"
+          type="button"
+  >
+    <svg class="iconCalendar"
+         data-testid="field_name-Icon"
+         xmlns="http://www.w3.org/2000/svg"
+         version="1.1"
+         x="0px"
+         y="0px"
+         viewbox="131 -131 512 512"
+         xml:space="preserve"
+    >
+      <g>
+        <path d="M186.6,343.9h400.8V51.7H186.6V343.9z M296.1-2.6v-81.9c0-2.6-0.9-5.2-2.6-6.9s-4.3-2.6-6.9-2.6h-18.1   c-2.6,0-5.2,0.9-6.9,2.6c-1.7,1.7-2.6,4.3-2.6,6.9v81.9c0,2.6,0.9,5.2,2.6,6.9c1.7,1.7,4.3,2.6,6.9,2.6h18.1c2.6,0,5.2-0.9,6.9-2.6   C295.2,2.6,296.1,0,296.1-2.6z M515-2.6v-81.9c0-2.6-0.9-5.2-2.6-6.9c-1.7-1.7-4.3-2.6-6.9-2.6h-18.1c-2.6,0-5.2,0.9-6.9,2.6   c-1.7,1.7-2.6,4.3-2.6,6.9v81.9c0,2.6,0.9,5.2,2.6,6.9s4.3,2.6,6.9,2.6h18.1c2.6,0,5.2-0.9,6.9-2.6C514.1,2.6,515,0,515-2.6z    M624.5-20.7v364.6c0,9.5-3.4,18.1-11.2,25.9S597.7,381,587.4,381H186.6c-9.5,0-18.1-3.4-25.9-11.2c-6.9-6.9-11.2-15.5-11.2-25.9   V-20.7c0-9.5,3.4-18.1,11.2-25.9c6.9-6.9,15.5-11.2,25.9-11.2h37.1v-27.5c0-12.9,4.3-23.3,13.8-31.9c8.6-8.6,19.8-13.8,31.8-13.8   h18.1c12.9,0,23.3,4.3,31.9,13.8c8.6,8.6,13.8,19.8,13.8,31.9v27.6h109.5v-27.6c0-12.9,4.3-23.3,13.8-31.9   c8.6-8.6,19.8-13.8,31.9-13.8h18.1c12.9,0,23.3,4.3,31.9,13.8c8.6,8.6,13.8,19.8,13.8,31.9v27.6h36.2c9.5,0,18.1,3.4,25.9,11.2   C621-39.6,624.5-31,624.5-20.7z">
+        </path>
+      </g>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Required Props Value test 1`] = `
+<div class="dateInput"
+     data-testid="field_name-DateInput"
+>
+  <input aria-label="Date format: dd/mm/yyyy"
+         class="field"
+         data-testid="field_name"
+         name="field_name"
+         placeholder="dd/mm/yyyy"
+         type="text"
+         value="25/10/2000"
+  >
+  <button aria-label="Open calendar date picker"
+          class="openCalendarButton"
+          data-testid="field_name-OpenCalendarButton"
+          type="button"
+  >
+    <svg class="iconCalendar"
+         data-testid="field_name-Icon"
+         xmlns="http://www.w3.org/2000/svg"
+         version="1.1"
+         x="0px"
+         y="0px"
+         viewbox="131 -131 512 512"
+         xml:space="preserve"
+    >
+      <g>
+        <path d="M186.6,343.9h400.8V51.7H186.6V343.9z M296.1-2.6v-81.9c0-2.6-0.9-5.2-2.6-6.9s-4.3-2.6-6.9-2.6h-18.1   c-2.6,0-5.2,0.9-6.9,2.6c-1.7,1.7-2.6,4.3-2.6,6.9v81.9c0,2.6,0.9,5.2,2.6,6.9c1.7,1.7,4.3,2.6,6.9,2.6h18.1c2.6,0,5.2-0.9,6.9-2.6   C295.2,2.6,296.1,0,296.1-2.6z M515-2.6v-81.9c0-2.6-0.9-5.2-2.6-6.9c-1.7-1.7-4.3-2.6-6.9-2.6h-18.1c-2.6,0-5.2,0.9-6.9,2.6   c-1.7,1.7-2.6,4.3-2.6,6.9v81.9c0,2.6,0.9,5.2,2.6,6.9s4.3,2.6,6.9,2.6h18.1c2.6,0,5.2-0.9,6.9-2.6C514.1,2.6,515,0,515-2.6z    M624.5-20.7v364.6c0,9.5-3.4,18.1-11.2,25.9S597.7,381,587.4,381H186.6c-9.5,0-18.1-3.4-25.9-11.2c-6.9-6.9-11.2-15.5-11.2-25.9   V-20.7c0-9.5,3.4-18.1,11.2-25.9c6.9-6.9,15.5-11.2,25.9-11.2h37.1v-27.5c0-12.9,4.3-23.3,13.8-31.9c8.6-8.6,19.8-13.8,31.8-13.8   h18.1c12.9,0,23.3,4.3,31.9,13.8c8.6,8.6,13.8,19.8,13.8,31.9v27.6h109.5v-27.6c0-12.9,4.3-23.3,13.8-31.9   c8.6-8.6,19.8-13.8,31.9-13.8h18.1c12.9,0,23.3,4.3,31.9,13.8c8.6,8.6,13.8,19.8,13.8,31.9v27.6h36.2c9.5,0,18.1,3.4,25.9,11.2   C621-39.6,624.5-31,624.5-20.7z">
+        </path>
+      </g>
+    </svg>
+  </button>
+  <dialog class="calendar"
+          data-testid="field_name-Calendar"
+          open
+  >
+    <svg class="calendarArrow"
+         data-testid="field_name-CalendarArrow"
+         viewbox="0 0 20 9"
+         xmlns="http://www.w3.org/2000/svg"
+         fill="currentcolor"
+    >
+      <polyline class="selected"
+                points="0,10 10,0 20,10"
+                fill="none"
+                stroke-width="1"
+      >
+      </polyline>
+    </svg>
+    <div class="calendarTabs"
+         data-testid="field_name-CalendarTabs"
+         role="tablist"
+    >
+      <button aria-selected="true"
+              data-testid="field_name-Tab-Day"
+              disabled
+              id="field_name-Tab-Day"
+              role="tab"
+              type="button"
+      >
+        <span>
+          day
+        </span>
+      </button>
+      <button data-testid="field_name-Tab-Month"
+              id="field_name-Tab-Month"
+              role="tab"
+              type="button"
+      >
+        <span>
+          month
+        </span>
+      </button>
+      <button data-testid="field_name-Tab-Year"
+              id="field_name-Tab-Year"
+              role="tab"
+              type="button"
+      >
+        <span>
+          year
+        </span>
+      </button>
+    </div>
+    <div aria-labelledby="field_name-Tab-Day"
+         class="view"
+         data-testid="field_name-View"
+         role="tabpanel"
+    >
+      <div class="viewHead"
+           data-testid="field_name-ViewHead"
+      >
+        <div class="dateRange Day">
+          <button data-testid="field_name-Calendar-Day-ButtonPrevious"
+                  class="arrowButton previous"
+                  type="button"
+          >
+            <span>
+              View day options in Sept
+            </span>
+          </button>
+          <span data-testid="field_name-Calendar-Day-Range"
+                class="dateRangeText"
+          >
+            Oct
+          </span>
+          <button data-testid="field_name-Calendar-Day-ButtonNext"
+                  class="arrowButton next"
+                  type="button"
+          >
+            <span>
+              View day options in Nov
+            </span>
+          </button>
+        </div>
+        <button aria-label="Change year"
+                class="dateRangeYear Day"
+                data-testid="field_name-DateRangeYear"
+                type="button"
+        >
+          2000
+        </button>
+      </div>
+      <div class="viewBody Day"
+           data-testid="field_name-ViewBody"
+      >
+        <div class="viewWeekDays"
+             data-testid="field_name-Calendar-Day-WeekDay-1"
+        >
+          Mon
+        </div>
+        <div class="viewWeekDays"
+             data-testid="field_name-Calendar-Day-WeekDay-2"
+        >
+          Tue
+        </div>
+        <div class="viewWeekDays"
+             data-testid="field_name-Calendar-Day-WeekDay-3"
+        >
+          Wed
+        </div>
+        <div class="viewWeekDays"
+             data-testid="field_name-Calendar-Day-WeekDay-4"
+        >
+          Thu
+        </div>
+        <div class="viewWeekDays"
+             data-testid="field_name-Calendar-Day-WeekDay-5"
+        >
+          Fri
+        </div>
+        <div class="viewWeekDays"
+             data-testid="field_name-Calendar-Day-WeekDay-6"
+        >
+          Sat
+        </div>
+        <div class="viewWeekDays"
+             data-testid="field_name-Calendar-Day-WeekDay-7"
+        >
+          Sun
+        </div>
+        <button aria-hidden="true"
+                aria-label="25 September 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-09-25"
+                disabled
+                type="button"
+        >
+          25
+        </button>
+        <button aria-hidden="true"
+                aria-label="26 September 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-09-26"
+                disabled
+                type="button"
+        >
+          26
+        </button>
+        <button aria-hidden="true"
+                aria-label="27 September 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-09-27"
+                disabled
+                type="button"
+        >
+          27
+        </button>
+        <button aria-hidden="true"
+                aria-label="28 September 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-09-28"
+                disabled
+                type="button"
+        >
+          28
+        </button>
+        <button aria-hidden="true"
+                aria-label="29 September 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-09-29"
+                disabled
+                type="button"
+        >
+          29
+        </button>
+        <button aria-hidden="true"
+                aria-label="30 September 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-09-30"
+                disabled
+                type="button"
+        >
+          30
+        </button>
+        <button aria-label="1 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-01"
+                type="button"
+        >
+          1
+        </button>
+        <button aria-label="2 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-02"
+                type="button"
+        >
+          2
+        </button>
+        <button aria-label="3 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-03"
+                type="button"
+        >
+          3
+        </button>
+        <button aria-label="4 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-04"
+                type="button"
+        >
+          4
+        </button>
+        <button aria-label="5 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-05"
+                type="button"
+        >
+          5
+        </button>
+        <button aria-label="6 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-06"
+                type="button"
+        >
+          6
+        </button>
+        <button aria-label="7 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-07"
+                type="button"
+        >
+          7
+        </button>
+        <button aria-label="8 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-08"
+                type="button"
+        >
+          8
+        </button>
+        <button aria-label="9 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-09"
+                type="button"
+        >
+          9
+        </button>
+        <button aria-label="10 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-10"
+                type="button"
+        >
+          10
+        </button>
+        <button aria-label="11 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-11"
+                type="button"
+        >
+          11
+        </button>
+        <button aria-label="12 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-12"
+                type="button"
+        >
+          12
+        </button>
+        <button aria-label="13 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-13"
+                type="button"
+        >
+          13
+        </button>
+        <button aria-label="14 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-14"
+                type="button"
+        >
+          14
+        </button>
+        <button aria-label="15 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-15"
+                type="button"
+        >
+          15
+        </button>
+        <button aria-label="16 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-16"
+                type="button"
+        >
+          16
+        </button>
+        <button aria-label="17 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-17"
+                type="button"
+        >
+          17
+        </button>
+        <button aria-label="18 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-18"
+                type="button"
+        >
+          18
+        </button>
+        <button aria-label="19 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-19"
+                type="button"
+        >
+          19
+        </button>
+        <button aria-label="20 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-20"
+                type="button"
+        >
+          20
+        </button>
+        <button aria-label="21 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-21"
+                type="button"
+        >
+          21
+        </button>
+        <button aria-label="22 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-22"
+                type="button"
+        >
+          22
+        </button>
+        <button aria-label="23 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-23"
+                type="button"
+        >
+          23
+        </button>
+        <button aria-label="24 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-24"
+                type="button"
+        >
+          24
+        </button>
+        <button aria-label="Selected 25 October 2000"
+                class="dateOption Day selected"
+                data-testid="field_name-Calendar-Day-2000-10-25"
+                type="button"
+        >
+          25
+        </button>
+        <button aria-label="26 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-26"
+                type="button"
+        >
+          26
+        </button>
+        <button aria-label="27 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-27"
+                type="button"
+        >
+          27
+        </button>
+        <button aria-label="28 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-28"
+                type="button"
+        >
+          28
+        </button>
+        <button aria-label="29 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-29"
+                type="button"
+        >
+          29
+        </button>
+        <button aria-label="30 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-30"
+                type="button"
+        >
+          30
+        </button>
+        <button aria-label="31 October 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-10-31"
+                type="button"
+        >
+          31
+        </button>
+        <button aria-hidden="true"
+                aria-label="1 November 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-11-01"
+                disabled
+                type="button"
+        >
+          1
+        </button>
+        <button aria-hidden="true"
+                aria-label="2 November 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-11-02"
+                disabled
+                type="button"
+        >
+          2
+        </button>
+        <button aria-hidden="true"
+                aria-label="3 November 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-11-03"
+                disabled
+                type="button"
+        >
+          3
+        </button>
+        <button aria-hidden="true"
+                aria-label="4 November 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-11-04"
+                disabled
+                type="button"
+        >
+          4
+        </button>
+        <button aria-hidden="true"
+                aria-label="5 November 2000"
+                class="dateOption Day"
+                data-testid="field_name-Calendar-Day-2000-11-05"
+                disabled
+                type="button"
+        >
+          5
+        </button>
+      </div>
+    </div>
+  </dialog>
+</div>
+`;

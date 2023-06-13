@@ -1,0 +1,38 @@
+##########################################################################################
+# NOTE: this file is also used as the --ignore-path for Prettier & ESLint scripts
+# ? Reference: https://eslint.org/docs/latest/use/configure/ignore#using-an-alternate-file
+##########################################################################################
+
+# Common
+.DS_Store
+node_modules/
+npm-debug.log
+
+# IDE
+.idea/
+*.iml
+
+# Test generated files
+.nyc_output/
+coverage/
+__snapshots__/failed/
+
+# Build files
+storybook-static/
+/*.css
+/helpers
+/hooks
+/icons
+/ArrowButton.mjs
+/Calendar.mjs
+/CalendarArrow.mjs
+/CalendarContext.mjs
+/CalendarTabs.mjs
+/DateInput.mjs
+/DateInputContext.mjs
+/Field.mjs
+/View.mjs
+/ViewBody.mjs
+/ViewContext.mjs
+/ViewHead.mjs
+/ViewWeekDays.mjs

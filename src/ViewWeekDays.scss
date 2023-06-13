@@ -1,0 +1,16 @@
+.viewWeekDays {
+  color: inherit;
+  display: inline-block;
+  font-size: 0.625em;
+  line-height: 1.25em;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  opacity: 0.555;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(--ViewWeekDays_border-top-color);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--ViewWeekDays_border-bottom-color);
+}

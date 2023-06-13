@@ -1,0 +1,45 @@
+.field {
+  width: 100%;
+  flex-grow: 1;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 2.2em;
+  margin: 0;
+  appearance: none;
+  line-height: inherit;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0;
+  color: inherit;
+  background-color: var(--DateInput_background-color);
+  outline-style: none;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 400;
+
+  &:not([disabled]) {
+    border-color: var(--DateInput-not-disabled_border-color);
+    background-color: var(--DateInput-not-disabled_background-color);
+
+    &::placeholder {
+      opacity: 0.6;
+    }
+  }
+
+  &:focus {
+    opacity: 1;
+    border-color: var(--DateInput-focus_border-color);
+  }
+
+  &:invalid,
+  &:focus:invalid {
+    border-left-color: var(--DateInput-invalid_border-left-color);
+    border-left-width: 2px;
+  }
+
+  &::placeholder {
+    opacity: 0.4;
+    color: inherit;
+  }
+}

@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styling/CSS (layout) Import Separate test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/date-input/Calendar.css'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/date-input/CalendarArrow.css'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/date-input/DateInput.css'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/date-input/CalendarTabs.css'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/date-input/Field.css'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/date-input/View.css'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/date-input/ViewBody.css'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/date-input/ViewHead.css'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/date-input/ViewWeekDays.css'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;
+
+exports[`Styling/CSS (layout) Import test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/date-input/layout.css'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;

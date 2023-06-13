@@ -1,0 +1,20 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as CSSLayoutStories from './CSSLayout.stories.mjs';
+
+<Meta of={CSSLayoutStories} />
+
+# CSS (layout)
+
+All "layout" styles can be imported with a single `css` file:
+
+<Story of={CSSLayoutStories.Import} />
+
+## Separate component layout styles
+
+For further control, the layout styles for each specific component can also be used as separate `css` files:
+
+<Story of={CSSLayoutStories.ImportSeparate} />
+
+> #### Note:
+>
+> - The layout styles support inheritance of text direction by default.

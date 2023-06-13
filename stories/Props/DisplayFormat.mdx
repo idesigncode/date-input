@@ -1,0 +1,21 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import DefaultValue from '@idesigncode/storybook-tools/DefaultValue.mjs';
+import * as DisplayFormatStories from './DisplayFormat.stories.mjs';
+
+<Meta of={DisplayFormatStories} />
+
+# displayFormat
+
+<DefaultValue value="dd/MM/yyyy" />
+
+The [date-fns format](https://date-fns.org/docs/format) of the selected date when displayed to the user.
+
+This is also used as the (lowercase) placeholder text.
+
+### Example:
+
+<Story of={DisplayFormatStories.Example} />
+
+### Implementation:
+
+<Story of={DisplayFormatStories.Implementation} />

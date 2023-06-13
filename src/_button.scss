@@ -1,0 +1,23 @@
+@use 'colors' as colors;
+
+@mixin reset {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: none;
+  outline-offset: -0.2rem;
+  cursor: default;
+
+  &:not(:disabled):hover {
+    cursor: pointer;
+  }
+
+  &:focus-visible {
+    outline: 0.2rem solid colors.$focus;
+    z-index: 2;
+  }
+}

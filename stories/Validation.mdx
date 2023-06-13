@@ -1,0 +1,27 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as ValidationStories from './Validation.stories.mjs';
+
+<Meta of={ValidationStories} />
+
+# Validation
+
+Validation of the `value` is performed with the `displayFormat`, `format`, `max`, `min` and `required` props (if given).
+
+This validation occurs during the input field's `onInput` event, and also on initial load (if there is a given `value`).
+
+The result of the validation will update the field's validity message with the [setCustomValidity](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setCustomValidity) function of the [Constraint Validation API](https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation).
+
+> #### Note:
+>
+> - By default, `<DateInput />` does **_not_** show field validity messages ([reportValidity](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/reportValidity)).
+> - The example below shows how to use [reportValidity](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/reportValidity) with the [Constraint Validation API](https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation) after the default field validity messages have been set.
+
+If you want to set custom field validity messages, please use the [onValidationMessage](/docs/props-onvalidationmessage--docs) prop.
+
+### Example:
+
+<Story of={ValidationStories.Example} />
+
+### Implementation:
+
+<Story of={ValidationStories.Implementation} />

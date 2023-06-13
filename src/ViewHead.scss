@@ -1,0 +1,83 @@
+@use 'button';
+
+.viewHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-bottom: 0.25em;
+  font-size: inherit;
+}
+
+.dateRange {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &.Day {
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+  }
+
+  &:not(.Day) {
+    width: 100%;
+  }
+}
+
+.dateRangeText {
+  min-width: 2em;
+  text-align: center;
+}
+
+.dateRangeYear {
+  @include button.reset;
+}
+
+.arrowButton {
+  @include button.reset;
+
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+
+  &::before {
+    font-size: 1.3em;
+    line-height: 0.5;
+  }
+
+  &.next {
+    &::before {
+      content: '›';
+    }
+  }
+
+  &.previous {
+    &::before {
+      content: '‹';
+    }
+  }
+
+  &:not(:disabled) {
+    opacity: 0.555;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  span {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}

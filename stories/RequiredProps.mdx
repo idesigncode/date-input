@@ -1,0 +1,34 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as RequiredPropsStories from './RequiredProps.stories.mjs';
+
+<Meta of={RequiredPropsStories} />
+
+# Required Props
+
+The following props are required for rendering the `<DateInput />`:
+
+## name
+
+Standard HTML attribute for the field name.
+
+## onChange
+
+A function for custom handling of onChange events.
+
+Receives the input field's onChange `event` and the `formatValue` (formatted as per `format`).
+
+> #### Note:
+>
+> - It is recommended to update your local state with the `formatValue` rather than the `event.target.value`.
+
+## value
+
+A date string formatted as per the `format` prop (or an empty string).
+
+### Example:
+
+<Story of={RequiredPropsStories.Example} />
+
+### Implementation:
+
+<Story of={RequiredPropsStories.Implementation} />

@@ -1,0 +1,18 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as HTMLAttributesStories from './HTMLAttributes.stories.mjs';
+
+<Meta of={HTMLAttributesStories} />
+
+# HTML attributes
+
+If specified on `<DateInput />`, any valid HTML attributes will be passed on to the input field unless they are reserved for use within the component.
+
+In of the example component below, the input field is given `id="thisId"` (visible by inspecting the HTML source).
+
+### Example:
+
+<Story of={HTMLAttributesStories.Example} />
+
+### Implementation:
+
+<Story of={HTMLAttributesStories.Implementation} />

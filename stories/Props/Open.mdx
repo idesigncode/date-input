@@ -1,0 +1,21 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as OpenStories from './Open.stories.mjs';
+
+<Meta of={OpenStories} />
+
+# open
+
+Shows the `<Calendar />` on initial load.
+
+> #### Note:
+>
+> - By default, either the selected date or first selectable date recieves `:focus` when the `<Calendar />` is opened.
+> - If the `open` prop **_is_** used, this `:focus` functionality is disabled until the `<Calendar />` is interacted with or closed.
+
+### Example:
+
+<Story of={OpenStories.Example} />
+
+### Implementation:
+
+<Story of={OpenStories.Implementation} />

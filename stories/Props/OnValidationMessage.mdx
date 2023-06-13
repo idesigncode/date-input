@@ -1,0 +1,28 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as OnValidationMessageStories from './OnValidationMessage.stories.mjs';
+
+<Meta of={OnValidationMessageStories} />
+
+# onValidationMessage
+
+A function for custom handling of a field validity error `message` string (empty if `value` is valid).
+
+This validation occurs during the input field's `onInput` event, and also on initial load (if there is a given `value`).
+
+You can set a custom field validity message with the [setCustomValidity](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setCustomValidity) function of the [Constraint Validation API](https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation).
+
+> #### Note:
+>
+> - Using `onValidationMessage` will prevent the default use of [setCustomValidity](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setCustomValidity).
+> - By default, `<DateInput />` does **_not_** show field validity messages ([reportValidity](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/reportValidity)).
+> - The example below shows how to use [setCustomValidity](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setCustomValidity) and [reportValidity](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/reportValidity) with the [Constraint Validation API](https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation).
+
+If you want to use the default [setCustomValidity](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setCustomValidity) and field validity messages, please see [Validation](/docs/validation--docs) for an alternative implementation.
+
+### Example:
+
+<Story of={OnValidationMessageStories.Example} />
+
+### Implementation:
+
+<Story of={OnValidationMessageStories.Implementation} />

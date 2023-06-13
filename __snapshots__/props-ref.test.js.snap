@@ -1,0 +1,488 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Props/ref Implementation test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+        React
+      </span>
+      <span class="token keyword">
+        from
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        "react"
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+        DateInput
+      </span>
+      <span class="token keyword">
+        from
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        "@idesigncode/date-input/DateInput.mjs"
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        "@idesigncode/date-input/theme.css"
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        "@idesigncode/date-input/layout.css"
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        const
+      </span>
+      <span class>
+      </span>
+      <span class="token function-variable function">
+        RefExample
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        =
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        =&gt;
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        {
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        const
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        [
+      </span>
+      <span class>
+        value
+      </span>
+      <span class="token punctuation">
+        ,
+      </span>
+      <span class>
+        setValue
+      </span>
+      <span class="token punctuation">
+        ]
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        =
+      </span>
+      <span class>
+        React
+      </span>
+      <span class="token punctuation">
+        .
+      </span>
+      <span class="token function">
+        useState
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class="token string">
+        ""
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        const
+      </span>
+      <span class>
+        ref
+      </span>
+      <span class="token operator">
+        =
+      </span>
+      <span class>
+        React
+      </span>
+      <span class="token punctuation">
+        .
+      </span>
+      <span class="token function">
+        useRef
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        const
+      </span>
+      <span class>
+      </span>
+      <span class="token function-variable function">
+        handleOnChange
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        =
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class="token parameter">
+        event
+      </span>
+      <span class="token parameter punctuation">
+        ,
+      </span>
+      <span class="token parameter">
+        formatValue
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        =&gt;
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        {
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token function">
+        setValue
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class>
+        formatValue
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        if
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class>
+        ref
+      </span>
+      <span class="token operator">
+        &amp;&amp;
+      </span>
+      <span class>
+        ref
+      </span>
+      <span class="token punctuation">
+        .
+      </span>
+      <span class>
+        current
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        {
+      </span>
+      <span class>
+      </span>
+      <span class>
+        console
+      </span>
+      <span class="token punctuation">
+        .
+      </span>
+      <span class="token function">
+        log
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class>
+        ref
+      </span>
+      <span class="token punctuation">
+        .
+      </span>
+      <span class>
+        current
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        }
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        }
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        return
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token tag punctuation">
+        &lt;
+      </span>
+      <span class="token tag class-name">
+        DateInput
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        name
+      </span>
+      <span class="token tag attr-value punctuation attr-equals">
+        =
+      </span>
+      <span class="token tag attr-value punctuation">
+        "
+      </span>
+      <span class="token tag attr-value">
+        field_name
+      </span>
+      <span class="token tag attr-value punctuation">
+        "
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        onChange
+      </span>
+      <span class="token tag script language-javascript script-punctuation punctuation">
+        =
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        {
+      </span>
+      <span class="token tag script language-javascript">
+        handleOnChange
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        }
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        ref
+      </span>
+      <span class="token tag script language-javascript script-punctuation punctuation">
+        =
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        {
+      </span>
+      <span class="token tag script language-javascript">
+        ref
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        }
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        value
+      </span>
+      <span class="token tag script language-javascript script-punctuation punctuation">
+        =
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        {
+      </span>
+      <span class="token tag script language-javascript">
+        value
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        }
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag punctuation">
+        /&gt;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        }
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        export
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        default
+      </span>
+      <span class>
+        RefExample
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;

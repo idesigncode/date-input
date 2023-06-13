@@ -1,0 +1,18 @@
+.calendarArrow {
+  width: 1.25em;
+  height: 0.625em;
+  position: absolute;
+  top: 1px;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: -0.625em;
+
+  polyline {
+    stroke: var(--CalendarArrow-polyline_stroke);
+    fill: var(--CalendarArrow-polyline_fill);
+
+    &.selected {
+      fill: var(--CalendarArrow-polyline-selected_fill);
+    }
+  }
+}

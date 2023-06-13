@@ -1,0 +1,21 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import DefaultValue from '@idesigncode/storybook-tools/DefaultValue.mjs';
+import * as FormatStories from './Format.stories.mjs';
+
+<Meta of={FormatStories} />
+
+# format
+
+<DefaultValue value="yyyy-MM-dd" />
+
+The [date-fns format](https://date-fns.org/docs/format) of the `max`, `min` and `value` props.
+
+Also used to format the `formatValue` returned from the `onChange` function.
+
+### Example:
+
+<Story of={FormatStories.Example} />
+
+### Implementation:
+
+<Story of={FormatStories.Implementation} />

@@ -1,0 +1,42 @@
+@use 'colors' as colors;
+
+@mixin vars {
+  /* Calendar */
+  --Calendar_background-color: #{colors.$zinc-600};
+
+  /* CalendarArrow  */
+  --CalendarArrow-polyline_stroke: #{colors.$zinc-600};
+  --CalendarArrow-polyline_fill: #{colors.$zinc-700};
+  --CalendarArrow-polyline-selected_fill: #{colors.$zinc-600};
+
+  /* DateInput */
+  --DateInput_color: #{colors.$zinc-100};
+
+  /* CalendarTabs */
+  --CalendarTabs_border-color: #{colors.$zinc-600};
+  --CalendarTabs_background-color: #{colors.$zinc-600};
+  --CalendarTabs-li_background-color: #{colors.$zinc-700};
+  --CalendarTabs-li-selected_background-color: #{colors.$zinc-600};
+
+  /* Field */
+  --DateInput_background-color: #{colors.$zinc-700};
+  --DateInput-not-disabled_border-color: #{colors.$zinc-500};
+  --DateInput-not-disabled_background-color: #{colors.$zinc-600};
+  --DateInput-focus_border-color: #{colors.$zinc-400};
+  --DateInput-invalid_border-left-color: #{colors.$amber-500};
+
+  /* View */
+  --View_border-color: #{colors.$zinc-600};
+
+  /* ViewBody */
+  --ViewBody-not-Day-before_border-top-color: #{colors.$zinc-500};
+  --ViewBody-dateOption-not-disabled-hover_background-color: #{colors.$blue-600};
+  --ViewBody-dateOption-selected_background-color: #{colors.$blue-400};
+  --ViewBody-dateOption-selected_color: #{colors.$zinc-600};
+  --ViewBody-dateOption-selected-not-disabled-hover_background-color: #{colors.$blue-500};
+  --ViewBody-dateOptionText-current_text-decoration-color: #{colors.$blue-700};
+
+  /* ViewWeekDays */
+  --ViewWeekDays_border-top-color: #{colors.$zinc-500};
+  --ViewWeekDays_border-bottom-color: #{colors.$zinc-500};
+}

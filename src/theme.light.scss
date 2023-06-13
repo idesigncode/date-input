@@ -1,0 +1,5 @@
+@use 'theme.light.vars' as light;
+
+body {
+  @include light.vars;
+}

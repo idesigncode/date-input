@@ -1,0 +1,26 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as CSSThemesStories from './CSSThemes.stories.mjs';
+
+<Meta of={CSSThemesStories} />
+
+# CSS (themes)
+
+All "theme" styles can be imported with a single `css` file:
+
+<Story of={CSSThemesStories.CombinedImport} />
+
+This single `theme.css` file uses [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) media queries to automatically implement a light and dark theme.
+
+It also includes a "manual" theme override (for theme toggling) enabled by adding the appropriate `:root` class.
+
+<Story of={CSSThemesStories.CombinedImportThemeToggling} />
+
+## Separate themes
+
+For further control, each theme (without the use of media queries) can be used separately as needed:
+
+<Story of={CSSThemesStories.SeparateImport} />
+
+Each theme sets the following component specific [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) on the `body` for specific color values:
+
+<Story of={CSSThemesStories.SeparateImportVars} />

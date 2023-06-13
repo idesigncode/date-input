@@ -1,0 +1,26 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as ChildrenStories from './Children.stories.mjs';
+
+<Meta of={ChildrenStories} />
+
+# children
+
+You can compose your own structure of `<DateInput />` by supplying `children`.
+
+The only required child component is `<Field />`.
+
+A `className` prop can also be given to each component directly.
+
+The example below shows the correct nesting structure of all components and their specific [CSS (layout)](/docs/styling-css-layout--docs) styles.
+
+> #### Note:
+>
+> - Specific nesting is required to provide context to child components - for example: `<ViewBody />` must be a descendant of `<View />`.
+
+### Example:
+
+<Story of={ChildrenStories.Example} />
+
+### Implementation:
+
+<Story of={ChildrenStories.Implementation} />

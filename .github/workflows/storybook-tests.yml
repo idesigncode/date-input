@@ -1,0 +1,46 @@
+# This workflow runs Storybook CI tests against the Netlify build
+# ? Reference: https://github.com/storybookjs/test-runner#running-in-ci
+# ? Reference: https://github.com/marketplace/actions/wait-for-netlify-deployment
+
+name: Storybook Tests
+
+on:
+  push:
+    branches: ['main']
+  pull_request:
+    branches: ['main']
+
+env:
+  NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+      - name: Install dependencies
+        run: npm install
+
+      - name: Wait for Netlify
+        uses: probablyup/wait-for-netlify-action@v3.4.0
+        id: waitForDeployment
+        with:
+          site_id: ${{ secrets.NETLIFY_SITE_ID }}
+
+      - name: Run Storybook tests
+        run: npm run test:storybook
+        env:
+          TARGET_URL: '${{ steps.waitForDeployment.outputs.url }}'
+
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: failed image snapshots
+          path: __snapshots__/failed
+          retention-days: 7

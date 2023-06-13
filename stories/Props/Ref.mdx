@@ -1,0 +1,22 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as RefStories from './Ref.stories.mjs';
+
+<Meta of={RefStories} />
+
+# ref
+
+A [React ref](https://react.dev/learn/referencing-values-with-refs) to be applied to the input field.
+
+The example below will log the `ref.current` to the developer tools console.
+
+> #### Note:
+>
+> - It is recommended to update your local state with the `formatValue` rather than the `ref.current.value`.
+
+### Example:
+
+<Story of={RefStories.Example} />
+
+### Implementation:
+
+<Story of={RefStories.Implementation} />

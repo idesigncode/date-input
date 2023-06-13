@@ -1,0 +1,5 @@
+@use 'theme.dark.vars' as dark;
+
+body {
+  @include dark.vars;
+}

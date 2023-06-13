@@ -1,0 +1,45 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import DefaultValue from '@idesigncode/storybook-tools/DefaultValue.mjs';
+import * as AsStories from './As.stories.mjs';
+
+<Meta of={AsStories} />
+
+# as
+
+<DefaultValue value="input" />
+
+Customise the input field with [as=\{Component\}](#ascomponent) or [as="\[tagName\]"](#astagname).
+
+Can be applied to either `<DateInput />` or `<Field />` (if using a self-composed [children](/docs/props-children--docs) structure).
+
+## as=\{Component\}
+
+Use a custom React component as the input field.
+
+> #### Note:
+>
+> - Your custom React component will need to use [forwardRef](https://react.dev/reference/react/forwardRef) as the supplied component will be given a `ref`.
+
+### Example:
+
+<Story of={AsStories.AsComponentExampleExample} />
+
+### Implementation:
+
+<Story of={AsStories.AsComponentImplementation} />
+
+## as="\[tagName\]"
+
+Use a standard HTML Element as the input field by providing a (lowercase) [tagName](https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName) `string`.
+
+> #### Note:
+>
+> - The default value of `as` is already set to `"input"`.
+
+### Example:
+
+<Story of={AsStories.AsTagNameExampleExample} />
+
+### Implementation:
+
+<Story of={AsStories.AsTagNameImplementation} />

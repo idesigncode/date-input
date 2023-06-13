@@ -1,0 +1,22 @@
+@use 'theme.dark.vars' as dark;
+@use 'theme.light.vars' as light;
+
+/*** Automatic theme ***/
+@media (prefers-color-scheme: dark) {
+  :root:not(.dark):not(.light) {
+    @include dark.vars;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root:not(.dark):not(.light) {
+    @include light.vars;
+  }
+}
+
+/*** Manual theme override (JS toggle) ***/
+:root.dark {
+  @include dark.vars;
+}
+:root.light {
+  @include light.vars;
+}

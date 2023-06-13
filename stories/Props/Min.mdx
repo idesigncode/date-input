@@ -1,0 +1,18 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as MinStories from './Min.stories.mjs';
+
+<Meta of={MinStories} />
+
+# min
+
+A date string formatted as per the `format` prop.
+
+This will prevent the user selecting a date before this date.
+
+### Example:
+
+<Story of={MinStories.Example} />
+
+### Implementation:
+
+<Story of={MinStories.Implementation} />

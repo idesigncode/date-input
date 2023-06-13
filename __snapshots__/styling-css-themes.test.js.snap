@@ -1,0 +1,985 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styling/CSS (themes) Combined Import Theme Toggling test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        /*** Automatic theme ***/
+      </span>
+      <span class>
+      </span>
+      <span class>
+        @
+      </span>
+      <span class="token function">
+        media
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class="token parameter">
+        prefers
+      </span>
+      <span class="token parameter operator">
+        -
+      </span>
+      <span class="token parameter">
+        color
+      </span>
+      <span class="token parameter operator">
+        -
+      </span>
+      <span class="token parameter">
+        scheme
+      </span>
+      <span class="token parameter operator">
+        :
+      </span>
+      <span class="token parameter">
+        dark
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        {
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        :
+      </span>
+      <span class>
+        root
+      </span>
+      <span class="token operator">
+        :
+      </span>
+      <span class="token function">
+        not
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class="token punctuation">
+        .
+      </span>
+      <span class>
+        dark
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class="token operator">
+        :
+      </span>
+      <span class="token function">
+        not
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class="token parameter punctuation">
+        .
+      </span>
+      <span class="token parameter">
+        light
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        {
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // ...dark CSS variables (see below)
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        }
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        }
+      </span>
+      <span class>
+      </span>
+      <span class>
+        @
+      </span>
+      <span class="token function">
+        media
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class="token parameter">
+        prefers
+      </span>
+      <span class="token parameter operator">
+        -
+      </span>
+      <span class="token parameter">
+        color
+      </span>
+      <span class="token parameter operator">
+        -
+      </span>
+      <span class="token parameter">
+        scheme
+      </span>
+      <span class="token parameter operator">
+        :
+      </span>
+      <span class="token parameter">
+        light
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        {
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        :
+      </span>
+      <span class>
+        root
+      </span>
+      <span class="token operator">
+        :
+      </span>
+      <span class="token function">
+        not
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class="token punctuation">
+        .
+      </span>
+      <span class>
+        dark
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class="token operator">
+        :
+      </span>
+      <span class="token function">
+        not
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class="token parameter punctuation">
+        .
+      </span>
+      <span class="token parameter">
+        light
+      </span>
+      <span class="token punctuation">
+        )
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        {
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // ...light CSS variables (see below)
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        }
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        }
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        /*** Manual theme override (JS toggle) ***/
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        :
+      </span>
+      <span class>
+        root
+      </span>
+      <span class="token punctuation">
+        .
+      </span>
+      <span class>
+        dark
+      </span>
+      <span class="token punctuation">
+        {
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // ...dark CSS variables (see below)
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        }
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        :
+      </span>
+      <span class>
+        root
+      </span>
+      <span class="token punctuation">
+        .
+      </span>
+      <span class>
+        light
+      </span>
+      <span class="token punctuation">
+        {
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // ...light CSS variables (see below)
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        }
+      </span>
+      <span class>
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;
+
+exports[`Styling/CSS (themes) Combined Import test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/date-input/theme.css'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;
+
+exports[`Styling/CSS (themes) Separate Import Vars test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class>
+      </span>
+      <span class>
+        body
+      </span>
+      <span class="token punctuation">
+        {
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        /* Calendar */
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        Calendar_background
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        /* CalendarArrow  */
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        CalendarArrow
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        polyline_stroke
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        CalendarArrow
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        polyline_fill
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        CalendarArrow
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        polyline
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        selected_fill
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        /* DateInput */
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        DateInput_color
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        /* CalendarTabs */
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        CalendarTabs_border
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        CalendarTabs_background
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        CalendarTabs
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        li_background
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        CalendarTabs
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        li
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        selected_background
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        /* Field */
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        DateInput_background
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        DateInput
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        not
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        disabled_border
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        DateInput
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        not
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        disabled_background
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        DateInput
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        focus_border
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        DateInput
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        invalid_border
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        left
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        /* View */
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        View_border
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        /* ViewBody */
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        ViewBody
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        not
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        Day
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        before_border
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        top
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        ViewBody
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        dateOption
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        not
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        disabled
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        hover_background
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        ViewBody
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        dateOption
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        selected_background
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        ViewBody
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        dateOption
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        selected_color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        ViewBody
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        dateOption
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        selected
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        not
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        disabled
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        hover_background
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        ViewBody
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        dateOptionText
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        current_text
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        decoration
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        /* ViewWeekDays */
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        ViewWeekDays_border
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        top
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        ViewWeekDays_border
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        bottom
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        }
+      </span>
+      <span class>
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;
+
+exports[`Styling/CSS (themes) Separate Import test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/date-input/theme.dark.css'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/date-input/theme.light.css'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;

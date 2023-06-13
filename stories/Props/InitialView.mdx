@@ -1,0 +1,23 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import DefaultValue from '@idesigncode/storybook-tools/DefaultValue.mjs';
+import * as InitialViewStories from './InitialView.stories.mjs';
+
+<Meta of={InitialViewStories} />
+
+# initialView
+
+<DefaultValue value="Day" />
+
+Specify the view shown on opening the calendar when there is no `value`.
+
+If there is a `value`, the last shown view will override `initialView`.
+
+Accepts `"Day"`, `"Month"` or `"Year"`.
+
+### Example:
+
+<Story of={InitialViewStories.Example} />
+
+### Implementation:
+
+<Story of={InitialViewStories.Implementation} />

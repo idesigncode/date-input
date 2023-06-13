@@ -1,0 +1,4 @@
+{
+  "!(*.js|*.cjs|*.mjs)": "prettier --check",
+  "*.{js,cjs,mjs}": ["prettier --check", "eslint"]
+}

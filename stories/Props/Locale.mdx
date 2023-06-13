@@ -1,0 +1,28 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import DefaultValue from '@idesigncode/storybook-tools/DefaultValue.mjs';
+import * as LocaleStories from './Locale.stories.mjs';
+
+<Meta of={LocaleStories} />
+
+# locale
+
+<DefaultValue
+  link="https://github.com/date-fns/date-fns/tree/master/src/locale/en-AU"
+  type="object"
+  value="enAU"
+/>
+
+The [date-fns locale](https://date-fns.org/docs/Locale) object used for formatting and text translation.
+
+> #### Note:
+>
+> - The following example is using an "RTL" (Right To Left) written language.
+> - Although not shown here, the [layout styles](/docs/styling-css-layout--docs) support inheritance of text direction.
+
+### Example:
+
+<Story of={LocaleStories.Example} />
+
+### Implementation:
+
+<Story of={LocaleStories.Implementation} />

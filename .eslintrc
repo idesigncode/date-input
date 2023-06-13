@@ -1,0 +1,66 @@
+{
+  "ignorePatterns": [
+    // Unignore Javascript "dotfiles" (ignored by ESLint defaults)
+    "!.*.js",
+    "!.*.cjs",
+    "!.*.mjs"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "overrides": [
+    {
+      "files": ["*.mjs"],
+      "parserOptions": {
+        "sourceType": "module"
+      },
+      "globals": {
+        "__dirname": "off",
+        "__filename": "off",
+        "exports": "off",
+        "module": "off",
+        "require": "off"
+      }
+    }
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "plugins": ["simple-import-sort"],
+  "rules": {
+    "simple-import-sort/imports": [
+      "error",
+      {
+        // ? Reference: https://github.com/lydell/eslint-plugin-simple-import-sort/issues/25#issuecomment-625397779
+        "groups": [
+          [
+            // React related packages
+            "^react",
+            // Packages
+            "^@?\\w",
+            // Side effect imports
+            "^\\u0000",
+            // Parent imports (put `..` last)
+            "^\\.\\.(?!/?$)",
+            "^\\.\\./?$",
+            // Other relative imports (put same-folder imports and `.` last)
+            "^\\./(?=.*/)(?!/?$)",
+            "^\\.(?!/?$)",
+            "^\\./?$",
+            // Style imports
+            "^.+\\.s?css$"
+          ]
+        ]
+      }
+    ],
+    "simple-import-sort/exports": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
