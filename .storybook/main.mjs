@@ -32,17 +32,5 @@ export default {
     options: {},
   },
   stories: ['../**/RequiredProps.mdx', '../**/*.mdx', '../**/*.stories.*'],
-  storyIndexers: (indexers) => {
-    // Extend js story indexer for mjs
-    return indexers.map((indexer) => {
-      if (`${indexer.test}`.includes(`[tj]sx?$`)) {
-        return {
-          ...indexer,
-          test: /(stories|story)\.m?[tj]sx?$/,
-        };
-      }
-      return indexer;
-    });
-  },
   webpackFinal,
 };
