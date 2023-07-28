@@ -1,5 +1,5 @@
 import packageJson from '../package.json';
-import { webpackFinal } from '@idesigncode/storybook-tools/storybookConfig.mjs';
+import webpackFinal from '@idesigncode/storybook-tools/webpackFinal.cjs';
 
 export default {
   addons: [
