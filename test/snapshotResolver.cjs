@@ -6,15 +6,15 @@ module.exports = {
     path.join(
       process.cwd(),
       '__snapshots__',
-      `${path.basename(testPath)}${snapshotExtension}`
+      `${path.basename(testPath)}${snapshotExtension}`,
     ),
   resolveTestPath: (snapshotFilePath, snapshotExtension) =>
     path.join(
       process.env.TEST_ROOT,
-      path.basename(snapshotFilePath, snapshotExtension)
+      path.basename(snapshotFilePath, snapshotExtension),
     ),
   testPathForConsistencyCheck: path.join(
     process.env.TEST_ROOT,
-    'example.test.js'
+    'example.test.js',
   ),
 };

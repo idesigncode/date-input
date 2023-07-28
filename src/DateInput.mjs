@@ -33,7 +33,7 @@ const DateInput = React.forwardRef(
       value,
       ...inputProps
     },
-    ref
+    ref,
   ) => {
     const buttonRef = React.useRef();
     const localRef = React.useRef();
@@ -116,7 +116,7 @@ const DateInput = React.forwardRef(
         </DateInputContext.Provider>
       </div>
     );
-  }
+  },
 );
 
 DateInput.displayName = 'DateInput';

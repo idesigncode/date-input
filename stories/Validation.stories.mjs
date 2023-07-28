@@ -48,18 +48,18 @@ export const TypedValueIsOutsideMaxOrMin = {
         const input = within(canvasElement).getByTestId('field_name');
         await userEvent.type(
           within(canvasElement).getByTestId('field_name'),
-          format(subDays(minDate, 1), 'MM-yyyy-dd')
+          format(subDays(minDate, 1), 'MM-yyyy-dd'),
         );
         await waitFor(() =>
-          expect(input.validity.customError).toStrictEqual(true)
+          expect(input.validity.customError).toStrictEqual(true),
         );
         expect(input.validationMessage).toBe(
           `Please enter a valid date after ${format(
             subDays(minDate, 1),
-            'MM-yyyy-dd'
-          )} and before ${format(addDays(maxDate, 1), 'MM-yyyy-dd')}.`
+            'MM-yyyy-dd',
+          )} and before ${format(addDays(maxDate, 1), 'MM-yyyy-dd')}.`,
         );
-      }
+      },
     );
   },
 };

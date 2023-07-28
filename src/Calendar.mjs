@@ -19,7 +19,7 @@ const Calendar = ({ children, className }) => {
     value,
   } = React.useContext(DateInputContext);
   const [allowDateOptionFocus, setAllowDateOptionFocus] = React.useState(
-    !initialCalendarOpen
+    !initialCalendarOpen,
   );
   const [view, setView] = React.useState(initialView);
 

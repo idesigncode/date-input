@@ -29,7 +29,7 @@ const ViewBody = ({ children, className }) => {
     dateRange.find(
       (date) =>
         isDateOptionVisible(date, openToDate, view) &&
-        !isDateOptionDisabled(date, maxDate, minDate)
+        !isDateOptionDisabled(date, maxDate, minDate),
     );
 
   const focusRef = React.useRef();
@@ -97,7 +97,7 @@ const ViewBody = ({ children, className }) => {
 
               triggerOnInputByRef(
                 ref,
-                formatFn(date, displayFormat, { locale })
+                formatFn(date, displayFormat, { locale }),
               );
 
               return toggleCalendarOpen();

@@ -26,7 +26,7 @@ const ViewHead = ({ className }) => {
     `View ${getLocaleTabText(locale, view)} options in ${getDateRangeText(
       locale,
       newDate,
-      view
+      view,
     )}`;
 
   const visibleYear =

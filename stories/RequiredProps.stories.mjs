@@ -48,80 +48,80 @@ export const Name = {
       'The given [name] is used in the [data-testid] of subcomponents',
       async () => {
         const button = within(canvasElement).getByTestId(
-          `${args.name}-OpenCalendarButton`
+          `${args.name}-OpenCalendarButton`,
         );
         expect(button.classList.contains('openCalendarButton')).toBe(true);
         await userEvent.click(button);
         expect(
           within(canvasElement)
             .getByTestId(`${args.name}-Calendar`)
-            .classList.contains('calendar')
+            .classList.contains('calendar'),
         ).toBe(true);
         expect(
           within(canvasElement)
             .getByTestId(`${args.name}-CalendarArrow`)
-            .classList.contains('calendarArrow')
+            .classList.contains('calendarArrow'),
         ).toBe(true);
         expect(
           within(canvasElement)
             .getByTestId(`${args.name}-CalendarTabs`)
-            .classList.contains('calendarTabs')
+            .classList.contains('calendarTabs'),
         ).toBe(true);
         expect(
-          within(canvasElement).getByTestId(`${args.name}-Tab-Day`).id
+          within(canvasElement).getByTestId(`${args.name}-Tab-Day`).id,
         ).toBe(`${args.name}-Tab-Day`);
         expect(
-          within(canvasElement).getByTestId(`${args.name}-Tab-Month`).id
+          within(canvasElement).getByTestId(`${args.name}-Tab-Month`).id,
         ).toBe(`${args.name}-Tab-Month`);
         expect(
-          within(canvasElement).getByTestId(`${args.name}-Tab-Year`).id
+          within(canvasElement).getByTestId(`${args.name}-Tab-Year`).id,
         ).toBe(`${args.name}-Tab-Year`);
         expect(
           within(canvasElement)
             .getByTestId(`${args.name}-View`)
-            .classList.contains('view')
+            .classList.contains('view'),
         ).toBe(true);
         expect(
           within(canvasElement)
             .getByTestId(`${args.name}-ViewHead`)
-            .classList.contains('viewHead')
+            .classList.contains('viewHead'),
         ).toBe(true);
         expect(
           within(canvasElement)
             .getByTestId(`${args.name}-Calendar-Day-ButtonPrevious`)
-            .classList.contains('arrowButton')
+            .classList.contains('arrowButton'),
         ).toBe(true);
         expect(
           within(canvasElement)
             .getByTestId(`${args.name}-Calendar-Day-ButtonNext`)
-            .classList.contains('arrowButton')
+            .classList.contains('arrowButton'),
         ).toBe(true);
         expect(
           within(canvasElement)
             .getByTestId(`${args.name}-Calendar-Day-Range`)
-            .classList.contains('dateRangeText')
+            .classList.contains('dateRangeText'),
         ).toBe(true);
         expect(
           within(canvasElement)
             .getByTestId(`${args.name}-DateRangeYear`)
-            .classList.contains('dateRangeYear')
+            .classList.contains('dateRangeYear'),
         ).toBe(true);
         expect(
           within(canvasElement)
             .getByTestId(`${args.name}-ViewBody`)
-            .classList.contains('viewBody')
+            .classList.contains('viewBody'),
         ).toBe(true);
         expect(
           within(canvasElement)
             .getByTestId(`${args.name}-Calendar-Day-WeekDay-1`)
-            .classList.contains('viewWeekDays')
+            .classList.contains('viewWeekDays'),
         ).toBe(true);
         expect(
           within(canvasElement)
             .getByTestId(`${args.name}-Calendar-Day-${todayString}`)
-            .classList.contains('dateOption')
+            .classList.contains('dateOption'),
         ).toBe(true);
-      }
+      },
     );
   },
 };
@@ -149,16 +149,16 @@ export const OnChange = {
       'Receives the `event.target.value` in the default [displayFormat] format',
       async () => {
         await expect(eventValue.target.value).toEqual(
-          format(today, 'dd/MM/yyyy')
+          format(today, 'dd/MM/yyyy'),
         );
-      }
+      },
     );
 
     await step(
       'Receives the `formatValue` in the default [format] format',
       async () => {
         await expect(formatValue).toEqual(todayString);
-      }
+      },
     );
   },
 };
@@ -179,80 +179,80 @@ export const Value = {
       'In "Day" view the given [value] date is selected and has ":focus"',
       async () => {
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-OpenCalendarButton')
+          within(canvasElement).getByTestId('field_name-OpenCalendarButton'),
         );
         const dateOptionTestId = `field_name-Calendar-Day-${args.value}`;
         expect(
-          within(canvasElement).queryByTestId(dateOptionTestId)
+          within(canvasElement).queryByTestId(dateOptionTestId),
         ).not.toBeNull();
         expect(
           within(canvasElement)
             .getByTestId(dateOptionTestId)
-            .classList.contains('selected')
+            .classList.contains('selected'),
         ).toBe(true);
         expect(
-          within(canvasElement).getByTestId(dateOptionTestId)
+          within(canvasElement).getByTestId(dateOptionTestId),
         ).toHaveAttribute(
           'aria-label',
-          `Selected ${format(new Date(args.value), 'd MMMM yyyy')}`
+          `Selected ${format(new Date(args.value), 'd MMMM yyyy')}`,
         );
         expect(
-          within(canvasElement).getByTestId(dateOptionTestId)
+          within(canvasElement).getByTestId(dateOptionTestId),
         ).toHaveFocus();
-      }
+      },
     );
 
     await step(
       'In "Month" view the given [value] month is selected and has ":focus"',
       async () => {
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-Tab-Month')
+          within(canvasElement).getByTestId('field_name-Tab-Month'),
         );
         const month = format(new Date(args.value), 'MM');
         const dateOptionTestId = `field_name-Calendar-Month-${month}`;
         expect(
-          within(canvasElement).queryByTestId(dateOptionTestId)
+          within(canvasElement).queryByTestId(dateOptionTestId),
         ).not.toBeNull();
         expect(
           within(canvasElement)
             .getByTestId(dateOptionTestId)
-            .classList.contains('selected')
+            .classList.contains('selected'),
         ).toBe(true);
         expect(
-          within(canvasElement).getByTestId(dateOptionTestId)
+          within(canvasElement).getByTestId(dateOptionTestId),
         ).toHaveAttribute(
           'aria-label',
-          `Selected ${format(new Date(args.value), 'MMMM yyyy')}`
+          `Selected ${format(new Date(args.value), 'MMMM yyyy')}`,
         );
         expect(
-          within(canvasElement).getByTestId(dateOptionTestId)
+          within(canvasElement).getByTestId(dateOptionTestId),
         ).toHaveFocus();
-      }
+      },
     );
 
     await step(
       'In "Year" view the given [value] year is selected and has ":focus"',
       async () => {
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-Tab-Year')
+          within(canvasElement).getByTestId('field_name-Tab-Year'),
         );
         const year = format(new Date(args.value), 'yyyy');
         const dateOptionTestId = `field_name-Calendar-Year-${year}`;
         expect(
-          within(canvasElement).queryByTestId(dateOptionTestId)
+          within(canvasElement).queryByTestId(dateOptionTestId),
         ).not.toBeNull();
         expect(
           within(canvasElement)
             .getByTestId(dateOptionTestId)
-            .classList.contains('selected')
+            .classList.contains('selected'),
         ).toBe(true);
         expect(
-          within(canvasElement).getByTestId(dateOptionTestId)
+          within(canvasElement).getByTestId(dateOptionTestId),
         ).toHaveAttribute('aria-label', `Selected ${year}`);
         expect(
-          within(canvasElement).getByTestId(dateOptionTestId)
+          within(canvasElement).getByTestId(dateOptionTestId),
         ).toHaveFocus();
-      }
+      },
     );
 
     await step(
@@ -263,21 +263,21 @@ export const Value = {
         const [newYear, newMonth] = newDateString.split('-');
         await userEvent.click(
           within(canvasElement).getByTestId(
-            `field_name-Calendar-Year-${newYear}`
-          )
+            `field_name-Calendar-Year-${newYear}`,
+          ),
         );
         await userEvent.click(
           within(canvasElement).getByTestId(
-            `field_name-Calendar-Month-${newMonth}`
-          )
+            `field_name-Calendar-Month-${newMonth}`,
+          ),
         );
         await userEvent.click(
           within(canvasElement).getByTestId(
-            `field_name-Calendar-Day-${newDateString}`
-          )
+            `field_name-Calendar-Day-${newDateString}`,
+          ),
         );
         expect(input.value).toBe(format(newDate, 'dd/MM/yyyy'));
-      }
+      },
     );
 
     await step(
@@ -288,19 +288,19 @@ export const Value = {
         await userEvent.paste('25/10/2000');
         expect(input.value).toBe('25/10/2000');
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-OpenCalendarButton')
+          within(canvasElement).getByTestId('field_name-OpenCalendarButton'),
         );
         expect(
           within(canvasElement)
             .getByTestId('field_name-Calendar-Day-2000-10-25')
-            .classList.contains('selected')
+            .classList.contains('selected'),
         ).toBe(true);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-25'
-          )
+            'field_name-Calendar-Day-2000-10-25',
+          ),
         ).toHaveAttribute('aria-label', 'Selected 25 October 2000');
-      }
+      },
     );
   },
 };

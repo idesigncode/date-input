@@ -17,7 +17,7 @@ const OnValidationMessageExample = () => {
       // setTimeout prevents interference with Safari's automatic reportValidity
       if (ref && ref.current) {
         ref.current.setCustomValidity(
-          message.length ? 'Custom error message' : ''
+          message.length ? 'Custom error message' : '',
         );
         ref.current.reportValidity();
       }

@@ -39,15 +39,15 @@ export const UserInteraction = {
       'Does not open the calendar if the icon is clicked',
       async () => {
         expect(
-          within(canvasElement).queryByTestId('field_name-Calendar')
+          within(canvasElement).queryByTestId('field_name-Calendar'),
         ).toBeNull();
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-Icon')
+          within(canvasElement).getByTestId('field_name-Icon'),
         );
         expect(
-          within(canvasElement).queryByTestId('field_name-Calendar')
+          within(canvasElement).queryByTestId('field_name-Calendar'),
         ).toBeNull();
-      }
+      },
     );
   },
 };

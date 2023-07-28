@@ -33,7 +33,7 @@ export const Id = {
     await step('Field receives the [id="thisId"]', async () => {
       expect(within(canvasElement).getByTestId('field_name')).toHaveAttribute(
         'id',
-        'thisId'
+        'thisId',
       );
     });
   },
