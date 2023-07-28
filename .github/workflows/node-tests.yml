@@ -1,6 +1,6 @@
 # This workflow runs install-test across different versions of node
 
-name: Node.js Install Test
+name: Node Tests
 
 on:
   push:
