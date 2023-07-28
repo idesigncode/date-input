@@ -418,6 +418,9 @@ exports[`Props/onValidationMessage Implementation test 1`] = `
       <span class="token string">
         ""
       </span>
+      <span class="token punctuation">
+        ,
+      </span>
       <span class>
       </span>
       <span class>
@@ -653,8 +656,6 @@ exports[`Props/onValidationMessage Implementation test 1`] = `
       </span>
       <span class="token punctuation">
         ;
-      </span>
-      <span class>
       </span>
     </code>
   </pre>

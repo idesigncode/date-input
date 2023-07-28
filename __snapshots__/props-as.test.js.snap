@@ -635,8 +635,6 @@ exports[`Props/as As Component Implementation test 1`] = `
       <span class="token punctuation">
         ;
       </span>
-      <span class>
-      </span>
     </code>
   </pre>
   <button>
@@ -1069,8 +1067,6 @@ exports[`Props/as As Tag Name Implementation test 1`] = `
       </span>
       <span class="token punctuation">
         ;
-      </span>
-      <span class>
       </span>
     </code>
   </pre>
