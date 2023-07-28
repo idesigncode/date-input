@@ -19,7 +19,7 @@ const View = ({ children, className }) => {
   const minDate = min && getMinDate(min, format, view);
 
   const [openToDate, setOpenToDate] = React.useState(
-    getOpenToDate(maxDate, minDate, valueDate)
+    getOpenToDate(maxDate, minDate, valueDate),
   );
 
   const dateRange = getDateRange(openToDate, view);

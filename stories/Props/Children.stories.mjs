@@ -56,27 +56,27 @@ export const AllChildren = {
     await step('Renders DOM elements correctly', async () => {
       await step('Input', async () => {
         expect(
-          within(canvasElement).queryByTestId('field_name')
+          within(canvasElement).queryByTestId('field_name'),
         ).not.toBeNull();
       });
 
       await step('Icon button', async () => {
         expect(
-          within(canvasElement).queryByTestId('field_name-OpenCalendarButton')
+          within(canvasElement).queryByTestId('field_name-OpenCalendarButton'),
         ).not.toBeNull();
       });
 
       await step('Calendar', async () => {
         expect(
-          within(canvasElement).queryByTestId('field_name-Calendar')
+          within(canvasElement).queryByTestId('field_name-Calendar'),
         ).toBeNull();
 
         await step('Is rendered as [open] if the icon is clicked', async () => {
           await userEvent.click(
-            within(canvasElement).getByTestId('field_name-Icon')
+            within(canvasElement).getByTestId('field_name-Icon'),
           );
           expect(
-            within(canvasElement).getByTestId('field_name-Calendar')
+            within(canvasElement).getByTestId('field_name-Calendar'),
           ).not.toBeNull();
         });
 
@@ -84,32 +84,34 @@ export const AllChildren = {
           'Is not rendered as [open] if the user clicks outside of the <Calendar />',
           async () => {
             expect(
-              within(canvasElement).getByTestId('field_name-Calendar')
+              within(canvasElement).getByTestId('field_name-Calendar'),
             ).not.toBeNull();
             await userEvent.click(document.body);
             expect(
-              within(canvasElement).queryByTestId('field_name-Calendar')
+              within(canvasElement).queryByTestId('field_name-Calendar'),
             ).toBeNull();
-          }
+          },
         );
 
         await step(
           'Is not rendered as [open] if the user presses the "escape" key',
           async () => {
             await userEvent.click(
-              within(canvasElement).getByTestId('field_name-Icon')
+              within(canvasElement).getByTestId('field_name-Icon'),
             );
             expect(
-              within(canvasElement).queryByTestId('field_name-Calendar')
+              within(canvasElement).queryByTestId('field_name-Calendar'),
             ).not.toBeNull();
             await userEvent.keyboard('{Escape}');
             expect(
-              within(canvasElement).queryByTestId('field_name-Calendar')
+              within(canvasElement).queryByTestId('field_name-Calendar'),
             ).toBeNull();
             expect(
-              within(canvasElement).getByTestId('field_name-OpenCalendarButton')
+              within(canvasElement).getByTestId(
+                'field_name-OpenCalendarButton',
+              ),
             ).toHaveFocus();
-          }
+          },
         );
       });
     });
@@ -129,13 +131,13 @@ export const SingleChild = {
 
       await step('Icon button', async () => {
         expect(
-          within(canvasElement).queryByTestId('field_name-OpenCalendarButton')
+          within(canvasElement).queryByTestId('field_name-OpenCalendarButton'),
         ).toBeNull();
       });
 
       await step('Calendar', async () => {
         expect(
-          within(canvasElement).queryByTestId('field_name-Calendar')
+          within(canvasElement).queryByTestId('field_name-Calendar'),
         ).toBeNull();
       });
 

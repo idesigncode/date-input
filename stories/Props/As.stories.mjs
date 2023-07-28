@@ -35,7 +35,7 @@ export const AsComponentDateInput = {
   play: async ({ canvasElement, step }) => {
     await step('Renders input as component', async () => {
       expect(within(canvasElement).getByTestId('field_name')).toHaveStyle(
-        'color: rgb(0, 191, 255)'
+        'color: rgb(0, 191, 255)',
       );
     });
   },
@@ -68,7 +68,7 @@ export const AsTagNameDateInput = {
   play: async ({ canvasElement, step }) => {
     await step('Renders input as tagName "textarea"', async () => {
       expect(within(canvasElement).getByTestId('field_name').tagName).toBe(
-        'TEXTAREA'
+        'TEXTAREA',
       );
     });
   },

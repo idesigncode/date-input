@@ -45,14 +45,14 @@ export const MaxFuture = {
       'Calendar opens to the current date if [max] date is in the future',
       async () => {
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-Icon')
+          within(canvasElement).getByTestId('field_name-Icon'),
         );
         const button = within(canvasElement).queryByTestId(
-          `field_name-Calendar-Day-${todayString}`
+          `field_name-Calendar-Day-${todayString}`,
         );
         expect(button).not.toBeNull();
         expect(button).toHaveAttribute('aria-current', 'date');
-      }
+      },
     );
   },
 };
@@ -67,14 +67,14 @@ export const MaxPast = {
       'Calendar opens to the given [max] date if it is in the past',
       async () => {
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-Icon')
+          within(canvasElement).getByTestId('field_name-Icon'),
         );
         expect(
           within(canvasElement).queryByTestId(
-            `field_name-Calendar-Day-${pastDateString}`
-          )
+            `field_name-Calendar-Day-${pastDateString}`,
+          ),
         ).not.toBeNull();
-      }
+      },
     );
   },
 };
@@ -91,10 +91,10 @@ export const MinIsBeforeMax = {
       async () => {
         expect(async () => {
           await userEvent.click(
-            within(canvasElement).getByTestId('field_name-Icon')
+            within(canvasElement).getByTestId('field_name-Icon'),
           );
         }).not.toThrowError();
-      }
+      },
     );
   },
 };
@@ -111,18 +111,18 @@ export const TypedValueIsAfterMax = {
         const input = within(canvasElement).getByTestId('field_name');
         await userEvent.type(
           input,
-          format(addDays(new Date(args.max), 1), 'dd/MM/yyyy')
+          format(addDays(new Date(args.max), 1), 'dd/MM/yyyy'),
         );
         await waitFor(() =>
-          expect(input.validity.customError).toStrictEqual(true)
+          expect(input.validity.customError).toStrictEqual(true),
         );
         expect(input.validationMessage).toBe(
           `Please enter a valid date before ${format(
             addDays(new Date(args.max), 1),
-            'dd/MM/yyyy'
-          )}.`
+            'dd/MM/yyyy',
+          )}.`,
         );
-      }
+      },
     );
   },
 };
@@ -140,15 +140,15 @@ export const ValueIsAfterMax = {
         const input = within(canvasElement).getByTestId('field_name');
         expect(input.value).toBe(format(new Date(afterMax), 'dd/MM/yyyy'));
         await waitFor(() =>
-          expect(input.validity.customError).toStrictEqual(true)
+          expect(input.validity.customError).toStrictEqual(true),
         );
         expect(input.validationMessage).toBe(
           `Please enter a valid date before ${format(
             new Date(afterMax),
-            'dd/MM/yyyy'
-          )}.`
+            'dd/MM/yyyy',
+          )}.`,
         );
-      }
+      },
     );
   },
 };
@@ -167,10 +167,10 @@ export const ValueIsBeforeMax = {
       async () => {
         await userEvent.click(icon);
         const button = within(canvasElement).queryByTestId(
-          'field_name-Calendar-Day-ButtonNext'
+          'field_name-Calendar-Day-ButtonNext',
         );
         const range = within(canvasElement).getByTestId(
-          'field_name-Calendar-Day-Range'
+          'field_name-Calendar-Day-Range',
         );
         expect(button).not.toHaveAttribute('disabled');
         expect(button).not.toHaveAttribute('aria-hidden');
@@ -181,7 +181,7 @@ export const ValueIsBeforeMax = {
         expect(range).toHaveTextContent('Dec');
         await userEvent.click(button);
         expect(range).toHaveTextContent('Jan');
-      }
+      },
     );
 
     await step(
@@ -190,20 +190,20 @@ export const ValueIsBeforeMax = {
         await userEvent.keyboard('{Escape}');
         await userEvent.click(icon);
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-Tab-Month')
+          within(canvasElement).getByTestId('field_name-Tab-Month'),
         );
         const button = within(canvasElement).queryByTestId(
-          'field_name-Calendar-Month-ButtonNext'
+          'field_name-Calendar-Month-ButtonNext',
         );
         const range = within(canvasElement).getByTestId(
-          'field_name-Calendar-Month-Range'
+          'field_name-Calendar-Month-Range',
         );
         expect(button).not.toHaveAttribute('disabled');
         expect(button).not.toHaveAttribute('aria-hidden');
         expect(range).toHaveTextContent('1950');
         await userEvent.click(button);
         expect(range).toHaveTextContent('1951');
-      }
+      },
     );
 
     await step(
@@ -212,20 +212,20 @@ export const ValueIsBeforeMax = {
         await userEvent.keyboard('{Escape}');
         await userEvent.click(icon);
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-Tab-Year')
+          within(canvasElement).getByTestId('field_name-Tab-Year'),
         );
         const button = within(canvasElement).queryByTestId(
-          'field_name-Calendar-Year-ButtonNext'
+          'field_name-Calendar-Year-ButtonNext',
         );
         const range = within(canvasElement).getByTestId(
-          'field_name-Calendar-Year-Range'
+          'field_name-Calendar-Year-Range',
         );
         expect(button).not.toHaveAttribute('disabled');
         expect(button).not.toHaveAttribute('aria-hidden');
         expect(range).toHaveTextContent('1940 - 1959');
         await userEvent.click(button);
         expect(range).toHaveTextContent('1960 - 1979');
-      }
+      },
     );
   },
 };
@@ -243,362 +243,362 @@ export const ValueIsMax = {
       'Calendar "next" button on "Day" view is "disabled" if [max] date is in the current view',
       async () => {
         const button = within(canvasElement).queryByTestId(
-          'field_name-Calendar-Day-ButtonNext'
+          'field_name-Calendar-Day-ButtonNext',
         );
         const range = within(canvasElement).getByTestId(
-          'field_name-Calendar-Day-Range'
+          'field_name-Calendar-Day-Range',
         );
         expect(button).toHaveAttribute('disabled');
         expect(button).toHaveAttribute('aria-hidden', 'true');
         expect(range).toHaveTextContent('Oct');
         await userEvent.click(button);
         expect(range).toHaveTextContent('Oct');
-      }
+      },
     );
 
     await step(
       'Calendar "next" button on "Month" view is "disabled" if [max] date is in the current view',
       async () => {
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-Tab-Month')
+          within(canvasElement).getByTestId('field_name-Tab-Month'),
         );
         const button = within(canvasElement).queryByTestId(
-          'field_name-Calendar-Month-ButtonNext'
+          'field_name-Calendar-Month-ButtonNext',
         );
         const range = within(canvasElement).getByTestId(
-          'field_name-Calendar-Month-Range'
+          'field_name-Calendar-Month-Range',
         );
         expect(button).toHaveAttribute('disabled');
         expect(button).toHaveAttribute('aria-hidden', 'true');
         expect(range).toHaveTextContent('2000');
         await userEvent.click(button);
         expect(range).toHaveTextContent('2000');
-      }
+      },
     );
 
     await step(
       'Calendar "next" button on "Year" view is "disabled" if [max] date is in the current view',
       async () => {
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-Tab-Year')
+          within(canvasElement).getByTestId('field_name-Tab-Year'),
         );
         const button = within(canvasElement).queryByTestId(
-          'field_name-Calendar-Year-ButtonNext'
+          'field_name-Calendar-Year-ButtonNext',
         );
         const range = within(canvasElement).getByTestId(
-          'field_name-Calendar-Year-Range'
+          'field_name-Calendar-Year-Range',
         );
         expect(button).toHaveAttribute('disabled');
         expect(button).toHaveAttribute('aria-hidden', 'true');
         expect(range).toHaveTextContent('1990 - 2009');
         await userEvent.click(button);
         expect(range).toHaveTextContent('1990 - 2009');
-      }
+      },
     );
 
     await step(
       'Calendar days after the given [max] day are disabled',
       async () => {
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-Tab-Day')
+          within(canvasElement).getByTestId('field_name-Tab-Day'),
         );
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-01'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-01',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-02'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-02',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-03'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-03',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-04'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-04',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-05'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-05',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-06'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-06',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-07'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-07',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-08'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-08',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-09'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-09',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-10'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-10',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-11'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-11',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-12'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-12',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-13'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-13',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-14'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-14',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-15'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-15',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-16'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-16',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-17'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-17',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-18'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-18',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-19'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-19',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-20'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-20',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-21'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-21',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-22'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-22',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-23'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-23',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-24'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-24',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-25'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-25',
+          ).disabled,
         ).toBe(false);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-26'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-26',
+          ).disabled,
         ).toBe(true);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-27'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-27',
+          ).disabled,
         ).toBe(true);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-28'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-28',
+          ).disabled,
         ).toBe(true);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-29'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-29',
+          ).disabled,
         ).toBe(true);
         expect(
           within(canvasElement).getByTestId(
-            'field_name-Calendar-Day-2000-10-30'
-          ).disabled
+            'field_name-Calendar-Day-2000-10-30',
+          ).disabled,
         ).toBe(true);
-      }
+      },
     );
 
     await step(
       'Calendar months after the given [max] month are disabled',
       async () => {
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-Tab-Month')
+          within(canvasElement).getByTestId('field_name-Tab-Month'),
         );
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Month-01')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Month-02')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Month-03')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Month-04')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Month-05')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Month-06')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Month-07')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Month-08')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Month-09')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Month-10')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Month-11')
-            .disabled
+            .disabled,
         ).toBe(true);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Month-12')
-            .disabled
+            .disabled,
         ).toBe(true);
-      }
+      },
     );
 
     await step(
       'Calendar years after the given [max] year are disabled',
       async () => {
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-Tab-Year')
+          within(canvasElement).getByTestId('field_name-Tab-Year'),
         );
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-1990')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-1991')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-1992')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-1993')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-1994')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-1995')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-1996')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-1997')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-1998')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-1999')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-2000')
-            .disabled
+            .disabled,
         ).toBe(false);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-2001')
-            .disabled
+            .disabled,
         ).toBe(true);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-2002')
-            .disabled
+            .disabled,
         ).toBe(true);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-2003')
-            .disabled
+            .disabled,
         ).toBe(true);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-2004')
-            .disabled
+            .disabled,
         ).toBe(true);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-2005')
-            .disabled
+            .disabled,
         ).toBe(true);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-2006')
-            .disabled
+            .disabled,
         ).toBe(true);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-2007')
-            .disabled
+            .disabled,
         ).toBe(true);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-2008')
-            .disabled
+            .disabled,
         ).toBe(true);
         expect(
           within(canvasElement).queryByTestId('field_name-Calendar-Year-2009')
-            .disabled
+            .disabled,
         ).toBe(true);
-      }
+      },
     );
   },
 };

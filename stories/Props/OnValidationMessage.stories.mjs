@@ -57,7 +57,7 @@ export const OnLoadRequired = {
       async () => {
         expect(args.onValidationMessage).not.toHaveBeenCalled();
         args.onValidationMessage.mockClear();
-      }
+      },
     );
   },
 };
@@ -73,11 +73,11 @@ export const OnLoadValueValid = {
       'Receives an empty `message` string if [value] is valid',
       async () => {
         await waitFor(() =>
-          expect(args.onValidationMessage).toHaveBeenCalledTimes(1)
+          expect(args.onValidationMessage).toHaveBeenCalledTimes(1),
         );
         expect(args.onValidationMessage).toHaveBeenLastCalledWith('');
         args.onValidationMessage.mockClear();
-      }
+      },
     );
   },
 };
@@ -93,13 +93,13 @@ export const OnLoadValueInvalid = {
       'Receives the correct `message` string if [value] is invalid',
       async () => {
         await waitFor(() =>
-          expect(args.onValidationMessage).toHaveBeenCalledTimes(1)
+          expect(args.onValidationMessage).toHaveBeenCalledTimes(1),
         );
         expect(args.onValidationMessage).toHaveBeenLastCalledWith(
-          'Please enter a valid date in "dd/mm/yyyy" format.'
+          'Please enter a valid date in "dd/mm/yyyy" format.',
         );
         args.onValidationMessage.mockClear();
-      }
+      },
     );
   },
 };
@@ -117,15 +117,15 @@ export const OnUserInputMax = {
         args.onValidationMessage.mockClear();
         await userEvent.type(
           within(canvasElement).getByTestId('field_name'),
-          format(addDays(today, 1), 'dd/MM/yyyy')
+          format(addDays(today, 1), 'dd/MM/yyyy'),
         );
         expect(args.onValidationMessage).toHaveBeenLastCalledWith(
           `Please enter a valid date before ${format(
             addDays(today, 1),
-            'dd/MM/yyyy'
-          )}.`
+            'dd/MM/yyyy',
+          )}.`,
         );
-      }
+      },
     );
   },
 };
@@ -157,9 +157,9 @@ export const OnUserInputMaxMin = {
           args.onValidationMessage.mockClear();
           await userEvent.type(input, format(today, 'MM/yyyy/dd'));
           expect(args.onValidationMessage).toHaveBeenLastCalledWith(
-            'Please enter a valid date in "dd/mm/yyyy" format.'
+            'Please enter a valid date in "dd/mm/yyyy" format.',
           );
-        }
+        },
       );
 
       await userEvent.clear(input);
@@ -172,10 +172,10 @@ export const OnUserInputMaxMin = {
           expect(args.onValidationMessage).toHaveBeenLastCalledWith(
             `Please enter a valid date after ${format(
               subDays(today, 1),
-              'dd/MM/yyyy'
-            )} and before ${format(addDays(today, 1), 'dd/MM/yyyy')}.`
+              'dd/MM/yyyy',
+            )} and before ${format(addDays(today, 1), 'dd/MM/yyyy')}.`,
           );
-        }
+        },
       );
     });
   },
@@ -194,15 +194,15 @@ export const OnUserInputMin = {
         args.onValidationMessage.mockClear();
         await userEvent.type(
           within(canvasElement).getByTestId('field_name'),
-          format(subDays(today, 1), 'dd/MM/yyyy')
+          format(subDays(today, 1), 'dd/MM/yyyy'),
         );
         expect(args.onValidationMessage).toHaveBeenLastCalledWith(
           `Please enter a valid date after ${format(
             subDays(today, 1),
-            'dd/MM/yyyy'
-          )}.`
+            'dd/MM/yyyy',
+          )}.`,
         );
-      }
+      },
     );
   },
 };

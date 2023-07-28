@@ -47,9 +47,9 @@ export const MonthYearDay = {
         expect(input.value).toBe('3/30/11');
         expect(input.validity.customError).toStrictEqual(true);
         expect(input.validationMessage).toBe(
-          'Please enter a valid date in "mm-yyyy-dd" format.'
+          'Please enter a valid date in "mm-yyyy-dd" format.',
         );
-      }
+      },
     );
 
     await step(
@@ -60,7 +60,7 @@ export const MonthYearDay = {
         expect(input.value).toBe('12-2000-30');
         expect(input.validity.customError).toStrictEqual(false);
         expect(input.validationMessage).toBe('');
-      }
+      },
     );
 
     await step(
@@ -71,21 +71,21 @@ export const MonthYearDay = {
         expect(input.value).toBe('2000-12-3');
         await userEvent.type(input, '0');
         expect(input.value).toBe('12-2000-30');
-      }
+      },
     );
 
     await step(
       'Tab order follows [displayFormat] order (month, year, day)',
       async () => {
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-Icon')
+          within(canvasElement).getByTestId('field_name-Icon'),
         );
         const tabs = within(canvasElement).getAllByRole('tab');
         expect(tabs).toHaveLength(3);
         expect(tabs[0]).toHaveAttribute('data-testid', 'field_name-Tab-Month');
         expect(tabs[1]).toHaveAttribute('data-testid', 'field_name-Tab-Year');
         expect(tabs[2]).toHaveAttribute('data-testid', 'field_name-Tab-Day');
-      }
+      },
     );
   },
 };
@@ -98,7 +98,7 @@ export const YearDay = {
   play: async ({ canvasElement, step }) => {
     await step('Uses default tab order', async () => {
       await userEvent.click(
-        within(canvasElement).getByTestId('field_name-Icon')
+        within(canvasElement).getByTestId('field_name-Icon'),
       );
       const tabs = within(canvasElement).getAllByRole('tab');
       expect(tabs).toHaveLength(3);

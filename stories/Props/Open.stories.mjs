@@ -37,7 +37,7 @@ export const NoValue = {
   play: async ({ canvasElement, step }) => {
     await step('Is initially rendered as [open]', async () => {
       expect(
-        within(canvasElement).queryByTestId('field_name-Calendar')
+        within(canvasElement).queryByTestId('field_name-Calendar'),
       ).not.toBeNull();
     });
 
@@ -46,17 +46,17 @@ export const NoValue = {
       async () => {
         expect(
           within(canvasElement).getByTestId(
-            `field_name-Calendar-Day-${todayString}`
-          )
+            `field_name-Calendar-Day-${todayString}`,
+          ),
         ).not.toHaveFocus();
-      }
+      },
     );
 
     await step(
       'The first selectable date option gains ":focus" after <Calendar /> is interacted with',
       async () => {
         const dateOptionDay = within(canvasElement).getByTestId(
-          `field_name-Calendar-Day-${format(today, 'yyyy-MM')}-01`
+          `field_name-Calendar-Day-${format(today, 'yyyy-MM')}-01`,
         );
         expect(dateOptionDay).not.toHaveFocus();
         await userEvent.tab(); // Input
@@ -65,7 +65,7 @@ export const NoValue = {
         await waitFor(() => expect(dateOptionDay).toHaveFocus(), {
           timeout: 1000,
         });
-      }
+      },
     );
 
     await step(
@@ -73,19 +73,19 @@ export const NoValue = {
       async () => {
         const dateOptionMonthTestId = 'field_name-Calendar-Month-01';
         expect(
-          within(canvasElement).queryByTestId(dateOptionMonthTestId)
+          within(canvasElement).queryByTestId(dateOptionMonthTestId),
         ).toBeNull();
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-Tab-Month')
+          within(canvasElement).getByTestId('field_name-Tab-Month'),
         );
         await waitFor(
           () =>
             expect(
-              within(canvasElement).getByTestId(dateOptionMonthTestId)
+              within(canvasElement).getByTestId(dateOptionMonthTestId),
             ).toHaveFocus(),
-          { timeout: 1000 }
+          { timeout: 1000 },
         );
-      }
+      },
     );
 
     await step(
@@ -93,19 +93,19 @@ export const NoValue = {
       async () => {
         const dateOptionYearTestId = 'field_name-Calendar-Year-2010';
         expect(
-          within(canvasElement).queryByTestId(dateOptionYearTestId)
+          within(canvasElement).queryByTestId(dateOptionYearTestId),
         ).toBeNull();
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-Tab-Year')
+          within(canvasElement).getByTestId('field_name-Tab-Year'),
         );
         await waitFor(
           () =>
             expect(
-              within(canvasElement).getByTestId(dateOptionYearTestId)
+              within(canvasElement).getByTestId(dateOptionYearTestId),
             ).toHaveFocus(),
-          { timeout: 1000 }
+          { timeout: 1000 },
         );
-      }
+      },
     );
   },
 };
@@ -122,17 +122,17 @@ export const Value = {
       async () => {
         expect(
           within(canvasElement).getByTestId(
-            `field_name-Calendar-Day-${todayString}`
-          )
+            `field_name-Calendar-Day-${todayString}`,
+          ),
         ).not.toHaveFocus();
-      }
+      },
     );
 
     await step(
       'The given [value] date option gains ":focus" after <Calendar /> is interacted with',
       async () => {
         const dateOption = within(canvasElement).getByTestId(
-          `field_name-Calendar-Day-${todayString}`
+          `field_name-Calendar-Day-${todayString}`,
         );
         expect(dateOption).not.toHaveFocus();
         await userEvent.tab(); // Input
@@ -141,7 +141,7 @@ export const Value = {
         await waitFor(() => expect(dateOption).toHaveFocus(), {
           timeout: 1000,
         });
-      }
+      },
     );
 
     await step(
@@ -149,22 +149,22 @@ export const Value = {
       async () => {
         const dateOptionMonthTestId = `field_name-Calendar-Month-${format(
           today,
-          'MM'
+          'MM',
         )}`;
         expect(
-          within(canvasElement).queryByTestId(dateOptionMonthTestId)
+          within(canvasElement).queryByTestId(dateOptionMonthTestId),
         ).toBeNull();
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-Tab-Month')
+          within(canvasElement).getByTestId('field_name-Tab-Month'),
         );
         await waitFor(
           () =>
             expect(
-              within(canvasElement).getByTestId(dateOptionMonthTestId)
+              within(canvasElement).getByTestId(dateOptionMonthTestId),
             ).toHaveFocus(),
-          { timeout: 1000 }
+          { timeout: 1000 },
         );
-      }
+      },
     );
 
     await step(
@@ -172,22 +172,22 @@ export const Value = {
       async () => {
         const dateOptionYearTestId = `field_name-Calendar-Year-${format(
           today,
-          'yyyy'
+          'yyyy',
         )}`;
         expect(
-          within(canvasElement).queryByTestId(dateOptionYearTestId)
+          within(canvasElement).queryByTestId(dateOptionYearTestId),
         ).toBeNull();
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-Tab-Year')
+          within(canvasElement).getByTestId('field_name-Tab-Year'),
         );
         await waitFor(
           () =>
             expect(
-              within(canvasElement).getByTestId(dateOptionYearTestId)
+              within(canvasElement).getByTestId(dateOptionYearTestId),
             ).toHaveFocus(),
-          { timeout: 1000 }
+          { timeout: 1000 },
         );
-      }
+      },
     );
   },
 };

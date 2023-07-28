@@ -91,21 +91,21 @@ const Field = ({ as: C = 'input', className }) => {
       if (!(isAfter(parsedDate, start) && isBefore(parsedDate, end))) {
         return `Please enter a valid date after ${formatFn(
           start,
-          displayFormat
+          displayFormat,
         )} and before ${formatFn(end, displayFormat)}.`;
       }
     } else if (end) {
       if (!isBefore(parsedDate, end)) {
         return `Please enter a valid date before ${formatFn(
           end,
-          displayFormat
+          displayFormat,
         )}.`;
       }
     } else if (start) {
       if (!isAfter(parsedDate, start)) {
         return `Please enter a valid date after ${formatFn(
           start,
-          displayFormat
+          displayFormat,
         )}.`;
       }
     }
@@ -124,13 +124,13 @@ const Field = ({ as: C = 'input', className }) => {
     if (dateValue) {
       const isDateValueInInitialFormat = !validateDateStringFormat(
         dateValue,
-        initialFormat
+        initialFormat,
       );
 
       const parsedDate = parse(
         dateValue,
         isDateValueInInitialFormat ? initialFormat : returnFormat,
-        new Date()
+        new Date(),
       );
 
       return isDateValueInInitialFormat

@@ -32,7 +32,7 @@ export const Attribute = {
   play: async ({ canvasElement, step }) => {
     await step('Input receives [required] attribute if given', async () => {
       expect(within(canvasElement).getByTestId('field_name')).toHaveAttribute(
-        'required'
+        'required',
       );
     });
   },

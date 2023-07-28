@@ -9,12 +9,12 @@ export const triggerOnInputByRef = (ref, newValue) => {
   if (ref && ref.current) {
     const valueSetter = Object.getOwnPropertyDescriptor(
       ref.current,
-      'value'
+      'value',
     ).set;
 
     const prototypeValueSetter = Object.getOwnPropertyDescriptor(
       Object.getPrototypeOf(ref.current),
-      'value'
+      'value',
     ).set;
 
     if (valueSetter && valueSetter !== prototypeValueSetter) {
@@ -24,7 +24,7 @@ export const triggerOnInputByRef = (ref, newValue) => {
     }
 
     ref.current.dispatchEvent(
-      new Event('input', { bubbles: true, composed: true })
+      new Event('input', { bubbles: true, composed: true }),
     );
     ref.current.focus();
   }

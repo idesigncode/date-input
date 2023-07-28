@@ -43,7 +43,7 @@ export const OuterDiv = {
       expect(
         within(canvasElement)
           .getByTestId('field_name-DateInput')
-          .classList.contains('firstClass')
+          .classList.contains('firstClass'),
       ).toBe(true);
     });
   },
@@ -74,18 +74,18 @@ export const Children = {
         expect(
           within(canvasElement)
             .getByTestId('field_name')
-            .classList.contains('test')
+            .classList.contains('test'),
         ).toBe(true);
       });
 
       await step('Calendar', async () => {
         await userEvent.click(
-          within(canvasElement).getByTestId('field_name-Icon')
+          within(canvasElement).getByTestId('field_name-Icon'),
         );
         expect(
           within(canvasElement)
             .getByTestId('field_name-Calendar')
-            .classList.contains('test')
+            .classList.contains('test'),
         ).toBe(true);
       });
 
@@ -93,7 +93,7 @@ export const Children = {
         expect(
           within(canvasElement)
             .getByTestId('field_name-CalendarArrow')
-            .classList.contains('test')
+            .classList.contains('test'),
         ).toBe(true);
       });
 
@@ -101,7 +101,7 @@ export const Children = {
         expect(
           within(canvasElement)
             .getByTestId('field_name-CalendarTabs')
-            .classList.contains('test')
+            .classList.contains('test'),
         ).toBe(true);
       });
 
@@ -109,7 +109,7 @@ export const Children = {
         expect(
           within(canvasElement)
             .getByTestId('field_name-ViewHead')
-            .classList.contains('test')
+            .classList.contains('test'),
         ).toBe(true);
       });
 
@@ -117,7 +117,7 @@ export const Children = {
         expect(
           within(canvasElement)
             .getByTestId('field_name-ViewBody')
-            .classList.contains('test')
+            .classList.contains('test'),
         ).toBe(true);
       });
 
@@ -125,37 +125,37 @@ export const Children = {
         expect(
           within(canvasElement)
             .getByTestId('field_name-Calendar-Day-WeekDay-1')
-            .classList.contains('test')
+            .classList.contains('test'),
         ).toBe(true);
         expect(
           within(canvasElement)
             .getByTestId('field_name-Calendar-Day-WeekDay-2')
-            .classList.contains('test')
+            .classList.contains('test'),
         ).toBe(true);
         expect(
           within(canvasElement)
             .getByTestId('field_name-Calendar-Day-WeekDay-3')
-            .classList.contains('test')
+            .classList.contains('test'),
         ).toBe(true);
         expect(
           within(canvasElement)
             .getByTestId('field_name-Calendar-Day-WeekDay-4')
-            .classList.contains('test')
+            .classList.contains('test'),
         ).toBe(true);
         expect(
           within(canvasElement)
             .getByTestId('field_name-Calendar-Day-WeekDay-5')
-            .classList.contains('test')
+            .classList.contains('test'),
         ).toBe(true);
         expect(
           within(canvasElement)
             .getByTestId('field_name-Calendar-Day-WeekDay-6')
-            .classList.contains('test')
+            .classList.contains('test'),
         ).toBe(true);
         expect(
           within(canvasElement)
             .getByTestId('field_name-Calendar-Day-WeekDay-7')
-            .classList.contains('test')
+            .classList.contains('test'),
         ).toBe(true);
       });
     });

@@ -38,10 +38,10 @@ export const FormatValue = {
         await userEvent.paste('30/12/2000');
         expect(args.onChange).toHaveBeenLastCalledWith(
           expect.objectContaining({ _reactName: 'onChange' }),
-          '12-2000-30'
+          '12-2000-30',
         );
         args.onChange.mockClear();
-      }
+      },
     );
   },
 };
