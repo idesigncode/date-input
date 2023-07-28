@@ -10,6 +10,7 @@ export default {
 export const CombinedImport = {
   args: {
     code: `import '../../theme.css';`,
+    format: false,
   },
 };
 
@@ -28,6 +29,7 @@ export const CombinedImportThemeToggling = {
       })
       // Rejoin as multiline string
       .join('\n'),
+    format: false,
   },
 };
 
@@ -37,6 +39,7 @@ export const SeparateImport = {
       `import '../../theme.dark.css';`,
       `import '../../theme.light.css';`,
     ].join('\r\n'),
+    format: false,
   },
 };
 
@@ -60,5 +63,6 @@ export const SeparateImportVars = {
       })
       // Rejoin as multiline string
       .join('\n'),
+    format: false,
   },
 };
