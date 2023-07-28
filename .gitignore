@@ -6,7 +6,7 @@
 # Common
 .DS_Store
 node_modules/
-npm-debug.log
+*.log
 
 # IDE
 .idea/
