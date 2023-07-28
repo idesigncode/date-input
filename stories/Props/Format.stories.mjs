@@ -33,10 +33,8 @@ export const FormatValue = {
     await step(
       'The [onChange] function receives the `formatValue` in the given [format]',
       async () => {
-        await userEvent.paste(
-          within(canvasElement).getByTestId('field_name'),
-          '30/12/2000'
-        );
+        await within(canvasElement).getByTestId('field_name').focus();
+        await userEvent.paste('30/12/2000');
         expect(args.onChange).toHaveBeenLastCalledWith(
           expect.objectContaining({ _reactName: 'onChange' }),
           '12-2000-30'
