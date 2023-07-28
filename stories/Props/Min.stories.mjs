@@ -1,3 +1,4 @@
+import React from 'react';
 import Source from '@idesigncode/storybook-tools/Source.mjs';
 import format from 'date-fns/format/index.js';
 import subDays from 'date-fns/subDays/index.js';
@@ -27,7 +28,7 @@ export const Implementation = {
   args: {
     code: MinExampleRaw,
   },
-  render: Source,
+  render: (args) => <Source {...args} />,
 };
 
 const min = '2000-10-25';

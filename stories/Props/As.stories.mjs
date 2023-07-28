@@ -24,7 +24,7 @@ export const AsComponentImplementation = {
   args: {
     code: AsComponentExampleRaw,
   },
-  render: Source,
+  render: (args) => <Source {...args} />,
 };
 
 export const AsComponentDateInput = {
@@ -57,7 +57,7 @@ export const AsTagNameImplementation = {
   args: {
     code: AsTagNameExampleRaw,
   },
-  render: Source,
+  render: (args) => <Source {...args} />,
 };
 
 export const AsTagNameDateInput = {

@@ -1,3 +1,4 @@
+import React from 'react';
 import Source from '@idesigncode/storybook-tools/Source.mjs';
 import DateInputWithArgs, {
   defaultArgs,
@@ -22,7 +23,7 @@ export const Implementation = {
   args: {
     code: InitialViewExampleRaw,
   },
-  render: Source,
+  render: (args) => <Source {...args} />,
 };
 
 export const Month = {

@@ -1,3 +1,4 @@
+import React from 'react';
 import Source from '@idesigncode/storybook-tools/Source.mjs';
 import faIR from 'date-fns/locale/fa-IR';
 import DateInputWithArgs, {
@@ -22,7 +23,7 @@ export const Implementation = {
   args: {
     code: LocaleExampleRaw,
   },
-  render: Source,
+  render: (args) => <Source {...args} />,
 };
 
 export const Text = {

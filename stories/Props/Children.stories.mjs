@@ -30,7 +30,7 @@ export const Implementation = {
   args: {
     code: ChildrenExampleRaw.replace(/^\/\* eslint-disable.*\n/, ''),
   },
-  render: Source,
+  render: (args) => <Source {...args} />,
 };
 
 export const AllChildren = {

@@ -1,3 +1,4 @@
+import React from 'react';
 import Source from '@idesigncode/storybook-tools/Source.mjs';
 import format from 'date-fns/format/index.js';
 import subDays from 'date-fns/subDays/index.js';
@@ -27,7 +28,7 @@ export const Implementation = {
   args: {
     code: RequiredPropsExampleRaw,
   },
-  render: Source,
+  render: (args) => <Source {...args} />,
 };
 
 export const Name = {
