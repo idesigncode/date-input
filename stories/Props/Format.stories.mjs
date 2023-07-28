@@ -1,3 +1,4 @@
+import React from 'react';
 import Source from '@idesigncode/storybook-tools/Source.mjs';
 import DateInputWithArgs, {
   defaultArgs,
@@ -21,7 +22,7 @@ export const Implementation = {
   args: {
     code: FormatExampleRaw,
   },
-  render: Source,
+  render: (args) => <Source {...args} />,
 };
 
 export const FormatValue = {
@@ -33,10 +34,8 @@ export const FormatValue = {
     await step(
       'The [onChange] function receives the `formatValue` in the given [format]',
       async () => {
-        await userEvent.paste(
-          within(canvasElement).getByTestId('field_name'),
-          '30/12/2000'
-        );
+        await within(canvasElement).getByTestId('field_name').focus();
+        await userEvent.paste('30/12/2000');
         expect(args.onChange).toHaveBeenLastCalledWith(
           expect.objectContaining({ _reactName: 'onChange' }),
           '12-2000-30'

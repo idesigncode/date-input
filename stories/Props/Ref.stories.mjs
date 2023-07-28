@@ -1,3 +1,4 @@
+import React from 'react';
 import Source from '@idesigncode/storybook-tools/Source.mjs';
 import RefExample from './Ref.example.mjs';
 import RefExampleRaw from './Ref.example.mjs?raw';
@@ -14,5 +15,5 @@ export const Implementation = {
   args: {
     code: RefExampleRaw,
   },
-  render: Source,
+  render: (args) => <Source {...args} />,
 };

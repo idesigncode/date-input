@@ -6,10 +6,6 @@ exports[`Styling/CSS (themes) Combined Import Theme Toggling test 1`] = `
     <code class="language-jsx"
           style="white-space: pre;"
     >
-      <span class>
-      </span>
-      <span class>
-      </span>
       <span class="token comment">
         /*** Automatic theme ***/
       </span>
@@ -314,8 +310,6 @@ exports[`Styling/CSS (themes) Combined Import Theme Toggling test 1`] = `
       <span class="token punctuation">
         }
       </span>
-      <span class>
-      </span>
     </code>
   </pre>
   <button>
@@ -355,8 +349,6 @@ exports[`Styling/CSS (themes) Separate Import Vars test 1`] = `
     <code class="language-jsx"
           style="white-space: pre;"
     >
-      <span class>
-      </span>
       <span class>
         body
       </span>
@@ -933,8 +925,6 @@ exports[`Styling/CSS (themes) Separate Import Vars test 1`] = `
       </span>
       <span class="token punctuation">
         }
-      </span>
-      <span class>
       </span>
     </code>
   </pre>

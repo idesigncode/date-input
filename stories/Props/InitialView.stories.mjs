@@ -1,3 +1,4 @@
+import React from 'react';
 import Source from '@idesigncode/storybook-tools/Source.mjs';
 import DateInputWithArgs, {
   defaultArgs,
@@ -22,7 +23,7 @@ export const Implementation = {
   args: {
     code: InitialViewExampleRaw,
   },
-  render: Source,
+  render: (args) => <Source {...args} />,
 };
 
 export const Month = {
@@ -145,10 +146,8 @@ export const Month = {
     await step(
       'Calendar opens to the previously selected view if input has value',
       async () => {
-        await userEvent.paste(
-          within(canvasElement).getByTestId('field_name'),
-          '2000-10-25'
-        );
+        await within(canvasElement).getByTestId('field_name').focus();
+        await userEvent.paste('2000-10-25');
         await userEvent.click(
           within(canvasElement).getByTestId('field_name-Icon')
         );

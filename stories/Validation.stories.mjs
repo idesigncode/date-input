@@ -1,3 +1,4 @@
+import React from 'react';
 import Source from '@idesigncode/storybook-tools/Source.mjs';
 import addDays from 'date-fns/addDays/index.js';
 import format from 'date-fns/format/index.js';
@@ -27,7 +28,7 @@ export const Implementation = {
   args: {
     code: ValidationExampleRaw,
   },
-  render: Source,
+  render: (args) => <Source {...args} />,
 };
 
 export const TypedValueIsOutsideMaxOrMin = {

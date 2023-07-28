@@ -1,3 +1,4 @@
+import React from 'react';
 import Source from '@idesigncode/storybook-tools/Source.mjs';
 import format from 'date-fns/format/index.js';
 import DateInputWithArgs, {
@@ -25,7 +26,7 @@ export const Implementation = {
   args: {
     code: OpenExampleRaw,
   },
-  render: Source,
+  render: (args) => <Source {...args} />,
 };
 
 export const NoValue = {

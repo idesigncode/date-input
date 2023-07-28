@@ -1,5 +1,5 @@
 import packageJson from '../package.json';
-import { webpackFinal } from '@idesigncode/storybook-tools/storybookConfig.mjs';
+import webpackFinal from '@idesigncode/storybook-tools/webpackFinal.cjs';
 
 export default {
   addons: [
@@ -32,17 +32,5 @@ export default {
     options: {},
   },
   stories: ['../**/RequiredProps.mdx', '../**/*.mdx', '../**/*.stories.*'],
-  storyIndexers: (indexers) => {
-    // Extend js story indexer for mjs
-    return indexers.map((indexer) => {
-      if (`${indexer.test}`.includes(`[tj]sx?$`)) {
-        return {
-          ...indexer,
-          test: /(stories|story)\.m?[tj]sx?$/,
-        };
-      }
-      return indexer;
-    });
-  },
   webpackFinal,
 };

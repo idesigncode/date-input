@@ -30,7 +30,7 @@ export const Implementation = {
   args: {
     code: ClassNameExampleRaw,
   },
-  render: Source,
+  render: (args) => <Source {...args} />,
 };
 
 export const OuterDiv = {

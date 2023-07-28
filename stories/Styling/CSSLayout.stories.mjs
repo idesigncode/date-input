@@ -9,6 +9,7 @@ export default {
 export const Import = {
   args: {
     code: `import '../../layout.css';`,
+    format: false,
   },
 };
 
@@ -17,5 +18,6 @@ export const ImportSeparate = {
     code: ChildrenExampleRaw.split('\n')
       .filter((line) => line.includes('.css') && !line.includes('theme.css'))
       .join('\n'),
+    format: false,
   },
 };

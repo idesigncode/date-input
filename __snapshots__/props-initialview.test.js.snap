@@ -375,8 +375,6 @@ exports[`Props/initialView Implementation test 1`] = `
       <span class="token punctuation">
         ;
       </span>
-      <span class>
-      </span>
     </code>
   </pre>
   <button>
@@ -447,12 +445,12 @@ exports[`Props/initialView Month test 1`] = `
           day
         </span>
       </button>
-      <button data-testid="field_name-Tab-Month"
+      <button aria-selected="true"
+              data-testid="field_name-Tab-Month"
+              disabled
               id="field_name-Tab-Month"
               role="tab"
               type="button"
-              aria-selected="true"
-              disabled
       >
         <span>
           month
@@ -538,11 +536,11 @@ exports[`Props/initialView Month test 1`] = `
         >
           May
         </button>
-        <button aria-label="June 2023"
+        <button aria-current="date"
+                aria-label="June 2023"
                 class="dateOption Month"
                 data-testid="field_name-Calendar-Month-06"
                 type="button"
-                aria-current="date"
         >
           Jun
         </button>

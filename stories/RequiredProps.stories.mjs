@@ -1,3 +1,4 @@
+import React from 'react';
 import Source from '@idesigncode/storybook-tools/Source.mjs';
 import format from 'date-fns/format/index.js';
 import subDays from 'date-fns/subDays/index.js';
@@ -27,7 +28,7 @@ export const Implementation = {
   args: {
     code: RequiredPropsExampleRaw,
   },
-  render: Source,
+  render: (args) => <Source {...args} />,
 };
 
 export const Name = {
@@ -39,7 +40,8 @@ export const Name = {
     await step('Input receives the given [name] as [data-testid]', async () => {
       const input = within(canvasElement).getByTestId(args.name);
       expect(input.tagName).toBe('INPUT');
-      await userEvent.paste(input, todayString);
+      await input.focus();
+      await userEvent.paste(todayString);
     });
 
     await step(
@@ -140,10 +142,8 @@ export const OnChange = {
     formatValue = {};
     await expect(eventValue).toEqual({});
     await expect(formatValue).toEqual({});
-    await userEvent.paste(
-      within(canvasElement).getByTestId('field_name'),
-      todayString
-    );
+    await within(canvasElement).getByTestId('field_name').focus();
+    await userEvent.paste(todayString);
 
     await step(
       'Receives the `event.target.value` in the default [displayFormat] format',
@@ -284,7 +284,8 @@ export const Value = {
       'Calendar opens with the pasted [value] date option selected',
       async () => {
         await userEvent.clear(input);
-        await userEvent.paste(input, '25/10/2000');
+        await input.focus();
+        await userEvent.paste('25/10/2000');
         expect(input.value).toBe('25/10/2000');
         await userEvent.click(
           within(canvasElement).getByTestId('field_name-OpenCalendarButton')
